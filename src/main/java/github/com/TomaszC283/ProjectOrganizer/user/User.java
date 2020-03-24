@@ -1,17 +1,24 @@
 package github.com.TomaszC283.ProjectOrganizer.user;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+
 import java.util.Set;
 
 @Entity
 @Table(name = "user")
 public class User {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id")
 	private Long id;
 
-	private String username;
+	@Column(name = "email")
+	@NotNull
+	private String email;
 
+	@Column(name = "password")
+	@NotNull
 	private String password;
 
 	@Transient
@@ -26,14 +33,6 @@ public class User {
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
 	}
 
 	public String getPassword() {
@@ -58,5 +57,13 @@ public class User {
 
 	public void setRoles(Set<Role> roles) {
 		this.roles = roles;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 }

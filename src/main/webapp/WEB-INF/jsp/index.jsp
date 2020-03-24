@@ -25,7 +25,7 @@
 					onblur="if (this.value == '') {this.value = 'TomaszC283';}" /> <label>
 					<input type="checkbox" value="Remember-Me" /> Remember Me?
 				</label>
-				<button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
+				<input type="submit" value="LOGIN"/>
 			</form>
 		</div>
 	</div>

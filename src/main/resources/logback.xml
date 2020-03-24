@@ -42,7 +42,7 @@
 		<appender-ref ref="FILE" />
 	</logger>
 
-	<logger name="TomaszC283.appdemo" additivity="false"
+	<logger name="Project-Organizer" additivity="false"
 		level="DEBUG">
 		<appender-ref ref="FILE" />
 	</logger>

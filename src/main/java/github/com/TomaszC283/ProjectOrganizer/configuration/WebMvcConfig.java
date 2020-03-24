@@ -5,8 +5,6 @@ import javax.servlet.MultipartConfigElement;
 import org.springframework.boot.web.servlet.MultipartConfigFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.util.unit.DataSize;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -14,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 
 @Configuration
-public class WebMvcConfig extends WebSecurityConfigurerAdapter implements WebMvcConfigurer {
+public class WebMvcConfig implements WebMvcConfigurer {
 	
 	@Bean
 	public BCryptPasswordEncoder pwdEncrypt() {
@@ -29,9 +27,4 @@ public class WebMvcConfig extends WebSecurityConfigurerAdapter implements WebMvc
 		factory.setMaxRequestSize(DataSize.ofMegabytes(5));
 		return factory.createMultipartConfig();
 	}
-	
-    @Bean
-    public AuthenticationManager customAuthenticationManager() throws Exception {
-        return authenticationManager();
-    }
 }

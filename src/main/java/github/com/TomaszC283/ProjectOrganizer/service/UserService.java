@@ -5,5 +5,5 @@ import github.com.TomaszC283.ProjectOrganizer.user.User;
 public interface UserService {
     void save(User user);
 
-    User findByUsername(String username);
+	public User findUserByEmail(String email);
 }
