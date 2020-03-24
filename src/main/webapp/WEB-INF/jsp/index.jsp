@@ -8,45 +8,30 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="/resources/css/style.css" />
-<title><s:message code="login.mainPage" /></title>
+<link rel="stylesheet" type="text/css"
+	href="/resources/css/index_style.css" />
+<title>Login Page</title>
 </head>
-<body class="index_body">
-	<h3 align="center">
-		<c:out value="${message }" />
-	</h3>
-	<h1 class="index_body">
-		<s:message code="login.header" />
-	</h1>
-	<div class="index_body">
-		<table width="350" border="0" cellpadding="4" cellspacing="1"
-			align="center">
-
-			<tr>
-				<td colspan="2" align="center"><c:if
-						test="${not empty param.error}">
-						<font color="red"><s:message code="error.logowanie" /></font>
-					</c:if></td>
-			</tr>
-			<tr>
-				<td align="right" width="140"><s:message code="register.email" />
-				</td>
-				<td align="left"><input type="text" name="email" id="email"
-					size="30" /></td>
-			</tr>
-			<tr>
-				<td align="right" width="140"><s:message
-						code="register.password" /></td>
-				<td align="left"><input type="password" name="password"
-					id="password" size="30" /></td>
-			</tr>
-
-			<tr>
-				<td colspan="2" align="center" bgcolor="#ffffff"><input
-					type="submit" value="Zaloguj" /></td>
-			</tr>
-
-		</table>
+<body>
+	<div class="container">
+		<h1>Project Organizer Software</h1>
+		<div class="signin">
+    	 <form method="POST" action="${contextPath}/login" class="form-signin">
+				<input type="text" class="user" value="Login"
+					onfocus="this.value = '';"
+					onblur="if (this.value == '') {this.value = 'admin@projectorganizer.pl';}" />
+				<input type="password" class="pass" value="Password"
+					onfocus="this.value = '';"
+					onblur="if (this.value == '') {this.value = 'TomaszC283';}" /> <label>
+					<input type="checkbox" value="Remember-Me" /> Remember Me?
+				</label>
+				<button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
+			</form>
+		</div>
+	</div>
+	<div class="footer">
+		<p>Copyright &copy; 2020 Project Organizer | Design by Tomasz
+			Czopur</p>
 	</div>
 </body>
 </html>

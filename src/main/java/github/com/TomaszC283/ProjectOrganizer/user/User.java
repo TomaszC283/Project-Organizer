@@ -1,109 +1,39 @@
 package github.com.TomaszC283.ProjectOrganizer.user;
 
+import javax.persistence.*;
 import java.util.Set;
-
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
-import javax.persistence.Transient;
-import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "user")
 public class User {
-
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "user_id")
-	private int id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-	@Column(name = "email")
-	@NotNull
-	private String email;
+	private String username;
 
-	@Column(name = "password")
-	@NotNull
 	private String password;
 
-	@Column(name = "name")
-	@NotNull
-	private String name;
+	@Transient
+	private String passwordConfirm;
 
-	@Column(name = "last_name")
-	@NotNull
-	private String lastName;
-
-	@Column(name = "active")
-	@NotNull
-	private int active;
-
-	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+	@ManyToMany
 	private Set<Role> roles;
 
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	@Transient
-	private String operacja;
-	
-	@Transient
-	private int nrRoli;
-	
-	@Transient
-	private String newPassword;
-	
-	public String getNewPassword() {
-		return newPassword;
-	}
-
-	public void setNewPassword(String newPassword) {
-		this.newPassword = newPassword;
-	}
-
-	public int getNrRoli() {
-		return nrRoli;
-	}
-
-	public void setNrRoli(int nrRoli) {
-		this.nrRoli = nrRoli;
-	}
-
-	public String getOperacja() {
-		return operacja;
-	}
-
-	public void setOperacja(String operacja) {
-		this.operacja = operacja;
-	}
-
-	// Gets and Sets
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {
@@ -114,20 +44,12 @@ public class User {
 		this.password = password;
 	}
 
-	public String getName() {
-		return name;
+	public String getPasswordConfirm() {
+		return passwordConfirm;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public int getActive() {
-		return active;
-	}
-
-	public void setActive(int active) {
-		this.active = active;
+	public void setPasswordConfirm(String passwordConfirm) {
+		this.passwordConfirm = passwordConfirm;
 	}
 
 	public Set<Role> getRoles() {
@@ -137,5 +59,4 @@ public class User {
 	public void setRoles(Set<Role> roles) {
 		this.roles = roles;
 	}
-
 }

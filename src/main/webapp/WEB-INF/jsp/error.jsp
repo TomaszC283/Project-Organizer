@@ -8,14 +8,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="/resources/css/style.css" />
-<title><s:message code="error.errorPage"/></title>
+<title>Error</title>
 </head>
 <body>
-<%@include file="/WEB-INF/incl/menu.app" %>
-
 <img src="/resources/images/stamperror.jpg">
 <h2>
-	<s:message code="error.defaultErrorMessage"/>
+	Ups! Something goes wrong !
 </h2>
 </body>
 </html>
