@@ -16,17 +16,16 @@
 <div class="container">
 	<h1>Project Organizer Software</h1>
 	<div class="signin">
-
 		<form id="loginForm" action="/login" method="POST" class="form-signin">
 			<div class="error">
 				<c:if test="${not empty param.error}">
 					<font>Incorect Email or Password !</font>
 				</c:if>
 			</div>
-			<input type="text" class="user" id="email" value="email@projectorganizer.pl"
+			<input type="text" class="user" name="email" id="email" value="email@projectorganizer.pl"
 				onfocus="this.value = '';"
 				onblur="if (this.value == '') {this.value = 'email';}" />
-				<input type="password" id="password" class="pass" value="Password"
+				<input type="password" name="password" id="password" class="pass" value="Password"
 				onfocus="this.value = '';"
 				onblur="if (this.value == '') {this.value = 'Password';}" />
 				<input type="submit" value="LOGIN" />

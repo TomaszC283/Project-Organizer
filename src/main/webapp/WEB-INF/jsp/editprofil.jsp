@@ -13,7 +13,6 @@
 </head>
 <body>
 <body>
-<%@include file="/WEB-INF/incl/menu.app" %>
 
 <h2 align="center"><s:message code="profilEdit.pageName"/></h2>
 
