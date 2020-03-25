@@ -60,6 +60,15 @@ h1 {
     color: #105986;
 }
 
+.error {
+	padding: 0px 0px 15px 0px;;
+	font-size: 30px;
+	font-family: Oswald-Light;
+	margin: 0;
+	color: 	#f4ff00;
+	text-align: center;
+}
+
 .signin {
     width: 25%;
     margin: 80px auto 0;
@@ -105,7 +114,7 @@ label {
     color: #FFF;
 }
 
-input[type="submit"] {
+input[type="submit"], input[type="button"] {
     width: 100%;
     padding: 10px 0;
     margin-top: 20px;
@@ -118,7 +127,16 @@ input[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
 }
+
 input[type="submit"]:hover {
+	background-color: rgba(16, 89, 134, 0.52);
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+input[type="button"]:hover {
 	background-color: rgba(16, 89, 134, 0.52);
 	-webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;

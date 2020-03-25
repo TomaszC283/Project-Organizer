@@ -8,30 +8,25 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css"
-	href="/resources/css/index_style.css" />
-<title>Login Page</title>
+<link rel="stylesheet" type="text/css" href="/resources/css/style.css" />
+<title><s:message code="menu.mainPage" /></title>
 </head>
 <body>
 	<div class="container">
-		<h1>Project Organizer Software</h1>
-		<div class="signin">
-    	 <form method="POST" action="${contextPath}/login" class="form-signin">
-				<input type="text" class="user" value="Login"
-					onfocus="this.value = '';"
-					onblur="if (this.value == '') {this.value = 'admin@projectorganizer.pl';}" />
-				<input type="password" class="pass" value="Password"
-					onfocus="this.value = '';"
-					onblur="if (this.value == '') {this.value = 'TomaszC283';}" /> <label>
-					<input type="checkbox" value="Remember-Me" /> Remember Me?
-				</label>
-				<input type="submit" value="LOGIN"/>
-			</form>
+		<div class="menu">
+			<sec:authorize access="hasRole('ROLE_ADMIN')">
+				<a href="/admin">Admin</a> &nbsp &nbsp &nbsp &nbsp;
+            </sec:authorize>
+			<sec:authorize access="hasRole('ANONYMOUS')">
+				<a href="/login">Login</a> &nbsp &nbsp &nbsp &nbsp;
+            <a href="/register">Register</a> &nbsp &nbsp &nbsp &nbsp;
+            		</sec:authorize>
+			<sec:authorize access="isAuthenticated()">
+				<a href="/profil">Profile</a> &nbsp &nbsp &nbsp &nbsp;
+            <a href="/logout">Logout</a>
+			</sec:authorize>
 		</div>
-	</div>
-	<div class="footer">
-		<p>Copyright &copy; 2020 Project Organizer | Design by Tomasz
-			Czopur</p>
+		<div>Some test text !</div>
 	</div>
 </body>
 </html>
