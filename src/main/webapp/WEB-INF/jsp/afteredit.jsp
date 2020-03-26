@@ -20,7 +20,7 @@
 
 </head>
 <body>
-<%@include file="/WEB-INF/incl/menu.app" %>
+<%@include file="/WEB-INF/incl/menu.html" %>
 <p align="center">
 	<font face="sans-serif" size="5">
 		<c:out value="${message }" />

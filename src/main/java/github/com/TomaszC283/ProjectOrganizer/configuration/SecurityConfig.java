@@ -32,30 +32,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	private String rolesQuery;
 
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth.jdbcAuthentication().usersByUsernameQuery(usersQuery)
-		.authoritiesByUsernameQuery(rolesQuery).dataSource(ds).passwordEncoder(bcp);
+		auth.jdbcAuthentication().usersByUsernameQuery(usersQuery).authoritiesByUsernameQuery(rolesQuery).dataSource(ds)
+				.passwordEncoder(bcp);
 	}
-	
+
 	protected void configure(HttpSecurity httpSec) throws Exception {
-		httpSec
-		.authorizeRequests()
-		.antMatchers("/").permitAll()
-		.antMatchers("/login").permitAll()
-		.antMatchers("/register").permitAll()
-		.antMatchers("//adduser").permitAll()
-		.antMatchers("/admin").hasAuthority("ROLE_ADMIN")
-		.anyRequest().authenticated()
-		.and().csrf().disable().formLogin()
-		.loginPage("/login")
-		.failureUrl("/login?error=true")
-		.defaultSuccessUrl("/").usernameParameter("email")
-		.passwordParameter("password")
-		.and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-		.logoutSuccessUrl("/")
-		.and().exceptionHandling().accessDeniedPage("/denied");
+		httpSec.authorizeRequests().antMatchers("/").permitAll().antMatchers("/login").permitAll()
+				.antMatchers("/register").permitAll().antMatchers("//adduser").permitAll().antMatchers("/admin")
+				.hasAuthority("ROLE_ADMIN").anyRequest().authenticated().and().csrf().disable().formLogin()
+				.loginPage("/login").failureUrl("/login?error=true").defaultSuccessUrl("/").usernameParameter("email")
+				.passwordParameter("password").and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+				.logoutSuccessUrl("/").and().exceptionHandling().accessDeniedPage("/denied");
 	}
-	
+
 	public void configure(WebSecurity webSec) throws Exception {
-		webSec.ignoring().antMatchers("/resources/**","/statics/**","/css/**", "/js/**", "/images/*", "/incl/**");
+		webSec.ignoring().antMatchers("/resources/**", "/statics/**", "/css/**", "/js/**", "/images/*", "/incl/**");
 	}
 }

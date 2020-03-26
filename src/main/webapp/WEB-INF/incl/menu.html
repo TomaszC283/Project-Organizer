@@ -1,0 +1,78 @@
+<div class="menu">
+	<a href="/index">Main Page</a>&nbsp &nbsp &nbsp &nbsp; 
+	<a href="/contact">Contact</a>&nbsp &nbsp &nbsp &nbsp;
+	<sec:authorize access="hasRole('ROLE_CLIENT')">
+		<a href="store">Services</a>&nbsp &nbsp &nbsp &nbsp;
+	</sec:authorize>
+
+	<sec:authorize access="hasRole('ANONYMOUS')">
+		<a href="/login">Login</a> &nbsp &nbsp &nbsp &nbsp;
+        <a href="/register">Register</a> &nbsp &nbsp &nbsp &nbsp;
+    </sec:authorize>
+
+	<sec:authorize access="hasRole('ROLE_ADMIN')">
+		<a href="store">Services</a>&nbsp &nbsp &nbsp &nbsp;
+		<a href="/storage">Storage</a> &nbsp &nbsp &nbsp &nbsp;
+		<a href="/orderhistory">Order history</a>&nbsp &nbsp &nbsp &nbsp;
+		<a href="/admin">Admin Page</a> &nbsp &nbsp &nbsp &nbsp;
+    </sec:authorize>
+
+	<sec:authorize access="hasRole('ROLE_PRODUCTION_MANAGER')">
+		<a href="/storage">Storage</a>&nbsp &nbsp &nbsp &nbsp;
+		<a href="/orderhistory">Order history</a>&nbsp &nbsp &nbsp &nbsp;
+	</sec:authorize>
+
+	<sec:authorize access="hasRole('ROLE_FOREMAN')">
+		<a href="/storage">Storage</a>&nbsp &nbsp &nbsp &nbsp;
+	</sec:authorize>
+
+	<sec:authorize access="hasRole('ROLE_CONSTRUCTOR')">
+		<a href="store">Services</a>&nbsp &nbsp &nbsp &nbsp;
+		<a href="/storage">Storage</a>&nbsp &nbsp &nbsp &nbsp;
+		<a href="/orderhistory">Order history</a>&nbsp &nbsp &nbsp &nbsp;
+	</sec:authorize>
+
+	<sec:authorize access="hasRole('ROLE_TECHNOLOGIST')">
+		<a href="/workingpanel">Working Panel</a>&nbsp &nbsp &nbsp &nbsp;
+	</sec:authorize>
+
+	<sec:authorize access="hasRole('ROLE_STOREKEEPER')">
+		<a href="/storage">Storage</a>&nbsp &nbsp &nbsp &nbsp;
+		<a href="/workingpanel">Working Panel</a>&nbsp &nbsp &nbsp &nbsp;
+	</sec:authorize>
+
+	<sec:authorize access="hasRole('ROLE_LOCKSMITH_PUNCHING')">
+		<a href="/workingpanel">Working Panel</a>&nbsp &nbsp &nbsp &nbsp;
+	</sec:authorize>
+
+	<sec:authorize access="hasRole('ROLE_LOCKSMITH_BEDNING')">
+		<a href="/workingpanel">Working Panel</a>&nbsp &nbsp &nbsp &nbsp;
+	</sec:authorize>
+
+	<sec:authorize access="hasRole('ROLE_LOCKSMITH_WELDER')">
+		<a href="/workingpanel">Working Panel</a>&nbsp &nbsp &nbsp &nbsp;
+	</sec:authorize>
+
+	<sec:authorize access="hasRole('ROLE_LOCKSMITH_PRINTER')">
+		<a href="/workingpanel">Working Panel</a>&nbsp &nbsp &nbsp &nbsp;
+	</sec:authorize>
+
+	<sec:authorize access="hasRole('ROLE_LOCKSMITH_FITTER')">
+		<a href="/workingpanel">Working Panel</a>&nbsp &nbsp &nbsp &nbsp;
+	</sec:authorize>
+
+	<sec:authorize access="hasRole('ROLE_QUALITY_CONTROL')">
+		<a href="/workingpanel">Working Panel</a>&nbsp &nbsp &nbsp &nbsp;
+	</sec:authorize>
+
+	<sec:authorize access="hasRole('ROLE_LOGISTICIAN')">
+		<a href="store">Services</a>&nbsp &nbsp &nbsp &nbsp;
+		<a href="/storage">Storage</a>&nbsp &nbsp &nbsp &nbsp;
+		<a href="/orderhistory">Order history</a>&nbsp &nbsp &nbsp &nbsp;
+	</sec:authorize>
+
+	<sec:authorize access="isAuthenticated()">
+		<a href="/profil">Profile</a> &nbsp &nbsp &nbsp &nbsp;
+        <a href="/logout">Logout</a>
+	</sec:authorize>
+</div>

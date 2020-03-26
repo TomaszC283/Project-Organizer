@@ -11,8 +11,8 @@
 <link rel="stylesheet" type="text/css" href="/resources/css/style.css" />
 <title><s:message code="menu.register"/></title>
 </head>
-<body>
-<%@include file="/WEB-INF/incl/menu.app" %>
+<body class="register">
+<%@include file="/WEB-INF/incl/menu.html" %>
 
 <h2><s:message code="menu.register"/></h2>
 
@@ -49,24 +49,24 @@
 				<td width="130" align="right" ><s:message code="register.email"/></td>
 				<td width="270" align="left"><sf:input path="email" size="28" /></td>
 			</tr>
-			<tr>
-				<td colspan="2" align="center"><font color="red"><sf:errors path="email"/></font></td>
-			</tr>
+
 
 			<tr>
 				<td width="130" align="right" ><s:message code="register.password"/></td>
 				<td width="270" align="left"><sf:password path="password" size="28" /></td>
 			</tr>
 			<tr>
-				<td colspan="2" align="center"><font color="red"><sf:errors path="password"/></font></td>
-			</tr>
-
-			<tr>
-				<td colspan="2" align="center" bgcolor="#fff">
+				<td colspan="2" align="center">
 					<input type="submit" value="<s:message code="button.register"/>" />
 					<input type="button" value="<s:message code="button.cancel"/>" 
 						onclick="window.location.href='${pageContext.request.contextPath}/'"/>
 				</td>
+			</tr>
+						<tr>
+				<td colspan="2" align="center"><font class="error"><sf:errors path="email"/></font></td>
+			</tr>
+						<tr>
+				<td colspan="2" align="center"><font class="error"><sf:errors path="password"/></font></td>
 			</tr>
 
 		</table>

@@ -11,6 +11,9 @@
 <title><s:message code="error.errorPage"/></title>
 </head>
 <body>
+<div>
+	<%@include file="/WEB-INF/incl/menu.html" %>
+</div>
 <img src="/resources/images/stamperror.jpg">
 <h2>
 	<s:message code="error.defaultErrorMessage"/>
