@@ -4,8 +4,6 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -21,7 +19,6 @@ import github.com.TomaszC283.ProjectOrganizer.user.User;
 @Transactional
 public class AdminServiceImpl implements AdminService {
 
-	private static final Logger LOG = LoggerFactory.getLogger(AdminServiceImpl.class);
 	
 	@Autowired
 	private AdminRepository adminRepository;
@@ -58,7 +55,7 @@ public class AdminServiceImpl implements AdminService {
 	
 	public void saveAll(List<User> userList) {
 		for (int i = 0; i < userList.size(); i++) {
-            Role role = roleRepository.findByRole("ROLE_USER");
+            Role role = roleRepository.findByRole("ROLE_CLIENT");
             userList.get(i).setRoles(new HashSet<Role>(Arrays.asList(role)));
 			userList.get(i).setPassword(bCryptPasswordEncoder.encode(userList.get(i).getPassword()));
 		}
@@ -67,10 +64,7 @@ public class AdminServiceImpl implements AdminService {
 
 	@Override
 	public void deleteUserById(int id) {
-		LOG.debug("[WYWOŁANIE >>> AdminServiceImpl.deleteUserById > PARAMETR: " + id);
-		LOG.debug("[WYWOŁANIE >>> AdminRepository.deleteUserFromUserRole > PARAMETR: " + id);
 		adminRepository.deleteUserFromUserRole(id);
-		LOG.debug("[WYWOŁANIE >>> AdminRepository.deleteUserFromUser > PARAMETR: " + id);
 		adminRepository.deleteUserFromUser(id);
 	}
 

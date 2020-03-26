@@ -10385,3 +10385,575 @@ Caused by: java.sql.SQLException: Column Index out of range, 3 > 2.
 [2020-03-26 12:30:45 ] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [RMI TCP Connection(4)-127.0.0.1] [598] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
 [2020-03-26 12:30:45 ] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(4)-127.0.0.1] [350] [INFO ] HikariPool-1 - Shutdown initiated...
 [2020-03-26 12:30:45 ] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(4)-127.0.0.1] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2020-03-26 18:21:34 ] [org.springframework.boot.StartupInfoLogger] [main] [55] [INFO ] Starting ProjectOrganizerApplication on LAPTOP-AF25GICJ with PID 7844 (C:\Programowanie\STS\Project-Organizer\Project-Organizer\target\classes started by media in C:\Programowanie\STS\Project-Organizer\Project-Organizer)
+[2020-03-26 18:21:34 ] [org.springframework.boot.SpringApplication] [main] [651] [INFO ] No active profile set, falling back to default profiles: default
+[2020-03-26 18:21:35 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [249] [INFO ] Multiple Spring Data modules found, entering strict repository configuration mode!
+[2020-03-26 18:21:35 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [127] [INFO ] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+[2020-03-26 18:21:35 ] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [main] [348] [INFO ] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface github.com.TomaszC283.ProjectOrganizer.admin.AdminRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[2020-03-26 18:21:35 ] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [main] [348] [INFO ] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface github.com.TomaszC283.ProjectOrganizer.user.RoleRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[2020-03-26 18:21:35 ] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [main] [348] [INFO ] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface github.com.TomaszC283.ProjectOrganizer.user.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[2020-03-26 18:21:35 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [187] [INFO ] Finished Spring Data repository scanning in 47ms. Found 0 JDBC repository interfaces.
+[2020-03-26 18:21:35 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [249] [INFO ] Multiple Spring Data modules found, entering strict repository configuration mode!
+[2020-03-26 18:21:35 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [127] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2020-03-26 18:21:36 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [187] [INFO ] Finished Spring Data repository scanning in 55ms. Found 3 JPA repository interfaces.
+[2020-03-26 18:21:36 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 18:21:36 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 18:21:36 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5fad41be' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 18:21:36 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 18:21:36 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 18:21:36 ] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [main] [92] [INFO ] Tomcat initialized with port(s): 8080 (http)
+[2020-03-26 18:21:36 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Initializing ProtocolHandler ["http-nio-8080"]
+[2020-03-26 18:21:36 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting service [Tomcat]
+[2020-03-26 18:21:36 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/9.0.31]
+[2020-03-26 18:21:37 ] [org.apache.juli.logging.DirectJDKLog] [main] [175] [WARN ] Failed to scan [file:/C:/Users/media/.m2/repository/org/glassfish/hk2/hk2/2.6.1/jakarta.annotation-api.jar] from classloader hierarchy
+java.io.FileNotFoundException: C:\Users\media\.m2\repository\org\glassfish\hk2\hk2\2.6.1\jakarta.annotation-api.jar (Nie można odnaleźć określonego pliku)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:177)
+	at org.apache.tomcat.util.scan.JarFileUrlJar.<init>(JarFileUrlJar.java:65)
+	at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:49)
+	at org.apache.tomcat.util.scan.StandardJarScanner.process(StandardJarScanner.java:383)
+	at org.apache.tomcat.util.scan.StandardJarScanner.processURLs(StandardJarScanner.java:318)
+	at org.apache.tomcat.util.scan.StandardJarScanner.doScanClassPath(StandardJarScanner.java:270)
+	at org.apache.tomcat.util.scan.StandardJarScanner.scan(StandardJarScanner.java:233)
+	at org.apache.jasper.servlet.TldScanner.scanJars(TldScanner.java:262)
+	at org.apache.jasper.servlet.TldScanner.scan(TldScanner.java:104)
+	at org.apache.jasper.servlet.JasperInitializer.onStartup(JasperInitializer.java:83)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:467)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:107)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:88)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:438)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at github.com.TomaszC283.ProjectOrganizer.ProjectOrganizerApplication.main(ProjectOrganizerApplication.java:12)
+[2020-03-26 18:21:37 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[2020-03-26 18:21:37 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2020-03-26 18:21:37 ] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [main] [284] [INFO ] Root WebApplicationContext: initialization completed in 2478 ms
+[2020-03-26 18:21:37 ] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2020-03-26 18:21:38 ] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2020-03-26 18:21:38 ] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2020-03-26 18:21:38 ] [org.hibernate.Version] [main] [44] [INFO ] HHH000412: Hibernate ORM core version 5.4.12.Final
+[2020-03-26 18:21:38 ] [org.hibernate.annotations.common.reflection.java.JavaReflectionManager] [main] [49] [INFO ] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[2020-03-26 18:21:39 ] [org.hibernate.dialect.Dialect] [main] [172] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[2020-03-26 18:21:39 ] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] [52] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2020-03-26 18:21:39 ] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [416] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2020-03-26 18:21:40 ] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [main] [220] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2020-03-26 18:21:41 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/resources/**'], []
+[2020-03-26 18:21:41 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/statics/**'], []
+[2020-03-26 18:21:41 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/css/**'], []
+[2020-03-26 18:21:41 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/js/**'], []
+[2020-03-26 18:21:41 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/images/*'], []
+[2020-03-26 18:21:41 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/incl/**'], []
+[2020-03-26 18:21:41 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e5364a3, org.springframework.security.web.context.SecurityContextPersistenceFilter@7ecb9e17, org.springframework.security.web.header.HeaderWriterFilter@2a075e70, org.springframework.security.web.authentication.logout.LogoutFilter@8cb7185, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4ede035e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@75bf9e67, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f20b6fe, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a336906, org.springframework.security.web.session.SessionManagementFilter@533e2f4, org.springframework.security.web.access.ExceptionTranslationFilter@49d543a9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@218f2f51]
+[2020-03-26 18:21:41 ] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport] [main] [181] [INFO ] Initializing ExecutorService 'applicationTaskExecutor'
+[2020-03-26 18:21:41 ] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [main] [58] [INFO ] Adding welcome page template: index
+[2020-03-26 18:21:42 ] [org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration] [main] [86] [INFO ] 
+
+Using generated security password: 95b87afa-c0f9-4c27-ba4c-7938f35a74c5
+
+[2020-03-26 18:21:42 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting ProtocolHandler ["http-nio-8080"]
+[2020-03-26 18:21:42 ] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [main] [204] [INFO ] Tomcat started on port(s): 8080 (http) with context path ''
+[2020-03-26 18:21:42 ] [org.springframework.boot.StartupInfoLogger] [main] [61] [INFO ] Started ProjectOrganizerApplication in 8.337 seconds (JVM running for 9.831)
+[2020-03-26 18:22:08 ] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-1] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-03-26 18:22:08 ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [525] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2020-03-26 18:22:08 ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [547] [INFO ] Completed initialization in 29 ms
+[2020-03-26 18:22:55 ] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] [RMI TCP Connection(13)-127.0.0.1] [159] [INFO ] Application shutdown requested.
+[2020-03-26 18:22:55 ] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport] [RMI TCP Connection(13)-127.0.0.1] [218] [INFO ] Shutting down ExecutorService 'applicationTaskExecutor'
+[2020-03-26 18:22:55 ] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [RMI TCP Connection(13)-127.0.0.1] [598] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2020-03-26 18:22:55 ] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(13)-127.0.0.1] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2020-03-26 18:22:55 ] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(13)-127.0.0.1] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2020-03-26 18:25:39 ] [org.springframework.boot.StartupInfoLogger] [main] [55] [INFO ] Starting ProjectOrganizerApplication on LAPTOP-AF25GICJ with PID 13564 (C:\Programowanie\STS\Project-Organizer\Project-Organizer\target\classes started by media in C:\Programowanie\STS\Project-Organizer\Project-Organizer)
+[2020-03-26 18:25:39 ] [org.springframework.boot.SpringApplication] [main] [651] [INFO ] No active profile set, falling back to default profiles: default
+[2020-03-26 18:25:40 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [249] [INFO ] Multiple Spring Data modules found, entering strict repository configuration mode!
+[2020-03-26 18:25:40 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [127] [INFO ] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+[2020-03-26 18:25:40 ] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [main] [348] [INFO ] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface github.com.TomaszC283.ProjectOrganizer.admin.AdminRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[2020-03-26 18:25:40 ] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [main] [348] [INFO ] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface github.com.TomaszC283.ProjectOrganizer.user.RoleRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[2020-03-26 18:25:40 ] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [main] [348] [INFO ] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface github.com.TomaszC283.ProjectOrganizer.user.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[2020-03-26 18:25:40 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [187] [INFO ] Finished Spring Data repository scanning in 56ms. Found 0 JDBC repository interfaces.
+[2020-03-26 18:25:40 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [249] [INFO ] Multiple Spring Data modules found, entering strict repository configuration mode!
+[2020-03-26 18:25:40 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [127] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2020-03-26 18:25:40 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [187] [INFO ] Finished Spring Data repository scanning in 69ms. Found 3 JPA repository interfaces.
+[2020-03-26 18:25:40 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 18:25:41 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 18:25:41 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@37b72ea' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 18:25:41 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 18:25:41 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 18:25:41 ] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [main] [92] [INFO ] Tomcat initialized with port(s): 8080 (http)
+[2020-03-26 18:25:41 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Initializing ProtocolHandler ["http-nio-8080"]
+[2020-03-26 18:25:41 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting service [Tomcat]
+[2020-03-26 18:25:41 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/9.0.31]
+[2020-03-26 18:25:41 ] [org.apache.juli.logging.DirectJDKLog] [main] [175] [WARN ] Failed to scan [file:/C:/Users/media/.m2/repository/org/glassfish/hk2/hk2/2.6.1/jakarta.annotation-api.jar] from classloader hierarchy
+java.io.FileNotFoundException: C:\Users\media\.m2\repository\org\glassfish\hk2\hk2\2.6.1\jakarta.annotation-api.jar (Nie można odnaleźć określonego pliku)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:177)
+	at org.apache.tomcat.util.scan.JarFileUrlJar.<init>(JarFileUrlJar.java:65)
+	at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:49)
+	at org.apache.tomcat.util.scan.StandardJarScanner.process(StandardJarScanner.java:383)
+	at org.apache.tomcat.util.scan.StandardJarScanner.processURLs(StandardJarScanner.java:318)
+	at org.apache.tomcat.util.scan.StandardJarScanner.doScanClassPath(StandardJarScanner.java:270)
+	at org.apache.tomcat.util.scan.StandardJarScanner.scan(StandardJarScanner.java:233)
+	at org.apache.jasper.servlet.TldScanner.scanJars(TldScanner.java:262)
+	at org.apache.jasper.servlet.TldScanner.scan(TldScanner.java:104)
+	at org.apache.jasper.servlet.JasperInitializer.onStartup(JasperInitializer.java:83)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:467)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:107)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:88)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:438)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at github.com.TomaszC283.ProjectOrganizer.ProjectOrganizerApplication.main(ProjectOrganizerApplication.java:12)
+[2020-03-26 18:25:41 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[2020-03-26 18:25:41 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2020-03-26 18:25:41 ] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [main] [284] [INFO ] Root WebApplicationContext: initialization completed in 2444 ms
+[2020-03-26 18:25:42 ] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2020-03-26 18:25:42 ] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2020-03-26 18:25:43 ] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2020-03-26 18:25:43 ] [org.hibernate.Version] [main] [44] [INFO ] HHH000412: Hibernate ORM core version 5.4.12.Final
+[2020-03-26 18:25:43 ] [org.hibernate.annotations.common.reflection.java.JavaReflectionManager] [main] [49] [INFO ] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[2020-03-26 18:25:43 ] [org.hibernate.dialect.Dialect] [main] [172] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[2020-03-26 18:25:44 ] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] [52] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2020-03-26 18:25:44 ] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [416] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2020-03-26 18:25:44 ] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [main] [220] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2020-03-26 18:25:45 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/resources/**'], []
+[2020-03-26 18:25:45 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/statics/**'], []
+[2020-03-26 18:25:45 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/css/**'], []
+[2020-03-26 18:25:45 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/js/**'], []
+[2020-03-26 18:25:45 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/images/*'], []
+[2020-03-26 18:25:45 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/incl/**'], []
+[2020-03-26 18:25:45 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1bb172dd, org.springframework.security.web.context.SecurityContextPersistenceFilter@57fce8b, org.springframework.security.web.header.HeaderWriterFilter@5855b0ed, org.springframework.security.web.authentication.logout.LogoutFilter@6cc56b32, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6550ce46, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51cca357, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7fb44737, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1cdd31a4, org.springframework.security.web.session.SessionManagementFilter@6b0325d0, org.springframework.security.web.access.ExceptionTranslationFilter@26aee0a6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1115be8c]
+[2020-03-26 18:25:46 ] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport] [main] [181] [INFO ] Initializing ExecutorService 'applicationTaskExecutor'
+[2020-03-26 18:25:46 ] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [main] [58] [INFO ] Adding welcome page template: index
+[2020-03-26 18:25:46 ] [org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration] [main] [86] [INFO ] 
+
+Using generated security password: ca19eb1c-d632-4f9f-b55f-cc9cf45ca6c7
+
+[2020-03-26 18:25:46 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting ProtocolHandler ["http-nio-8080"]
+[2020-03-26 18:25:46 ] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [main] [204] [INFO ] Tomcat started on port(s): 8080 (http) with context path ''
+[2020-03-26 18:25:46 ] [org.springframework.boot.StartupInfoLogger] [main] [61] [INFO ] Started ProjectOrganizerApplication in 7.737 seconds (JVM running for 9.047)
+[2020-03-26 18:25:52 ] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-1] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-03-26 18:25:52 ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [525] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2020-03-26 18:25:52 ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [547] [INFO ] Completed initialization in 26 ms
+[2020-03-26 18:26:18 ] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] [RMI TCP Connection(10)-127.0.0.1] [159] [INFO ] Application shutdown requested.
+[2020-03-26 18:26:18 ] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport] [RMI TCP Connection(10)-127.0.0.1] [218] [INFO ] Shutting down ExecutorService 'applicationTaskExecutor'
+[2020-03-26 18:26:18 ] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [RMI TCP Connection(10)-127.0.0.1] [598] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2020-03-26 18:26:18 ] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(10)-127.0.0.1] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2020-03-26 18:26:18 ] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(10)-127.0.0.1] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2020-03-26 18:26:51 ] [org.springframework.boot.StartupInfoLogger] [main] [55] [INFO ] Starting ProjectOrganizerApplication on LAPTOP-AF25GICJ with PID 9676 (C:\Programowanie\STS\Project-Organizer\Project-Organizer\target\classes started by media in C:\Programowanie\STS\Project-Organizer\Project-Organizer)
+[2020-03-26 18:26:51 ] [org.springframework.boot.SpringApplication] [main] [651] [INFO ] No active profile set, falling back to default profiles: default
+[2020-03-26 18:26:52 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [249] [INFO ] Multiple Spring Data modules found, entering strict repository configuration mode!
+[2020-03-26 18:26:52 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [127] [INFO ] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+[2020-03-26 18:26:52 ] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [main] [348] [INFO ] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface github.com.TomaszC283.ProjectOrganizer.admin.AdminRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[2020-03-26 18:26:52 ] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [main] [348] [INFO ] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface github.com.TomaszC283.ProjectOrganizer.user.RoleRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[2020-03-26 18:26:52 ] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [main] [348] [INFO ] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface github.com.TomaszC283.ProjectOrganizer.user.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[2020-03-26 18:26:52 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [187] [INFO ] Finished Spring Data repository scanning in 46ms. Found 0 JDBC repository interfaces.
+[2020-03-26 18:26:52 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [249] [INFO ] Multiple Spring Data modules found, entering strict repository configuration mode!
+[2020-03-26 18:26:52 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [127] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2020-03-26 18:26:52 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [187] [INFO ] Finished Spring Data repository scanning in 40ms. Found 3 JPA repository interfaces.
+[2020-03-26 18:26:52 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 18:26:52 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 18:26:52 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@73017a80' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 18:26:52 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 18:26:52 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 18:26:53 ] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [main] [92] [INFO ] Tomcat initialized with port(s): 8080 (http)
+[2020-03-26 18:26:53 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Initializing ProtocolHandler ["http-nio-8080"]
+[2020-03-26 18:26:53 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting service [Tomcat]
+[2020-03-26 18:26:53 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/9.0.31]
+[2020-03-26 18:26:53 ] [org.apache.juli.logging.DirectJDKLog] [main] [175] [WARN ] Failed to scan [file:/C:/Users/media/.m2/repository/org/glassfish/hk2/hk2/2.6.1/jakarta.annotation-api.jar] from classloader hierarchy
+java.io.FileNotFoundException: C:\Users\media\.m2\repository\org\glassfish\hk2\hk2\2.6.1\jakarta.annotation-api.jar (Nie można odnaleźć określonego pliku)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:177)
+	at org.apache.tomcat.util.scan.JarFileUrlJar.<init>(JarFileUrlJar.java:65)
+	at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:49)
+	at org.apache.tomcat.util.scan.StandardJarScanner.process(StandardJarScanner.java:383)
+	at org.apache.tomcat.util.scan.StandardJarScanner.processURLs(StandardJarScanner.java:318)
+	at org.apache.tomcat.util.scan.StandardJarScanner.doScanClassPath(StandardJarScanner.java:270)
+	at org.apache.tomcat.util.scan.StandardJarScanner.scan(StandardJarScanner.java:233)
+	at org.apache.jasper.servlet.TldScanner.scanJars(TldScanner.java:262)
+	at org.apache.jasper.servlet.TldScanner.scan(TldScanner.java:104)
+	at org.apache.jasper.servlet.JasperInitializer.onStartup(JasperInitializer.java:83)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:467)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:107)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:88)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:438)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at github.com.TomaszC283.ProjectOrganizer.ProjectOrganizerApplication.main(ProjectOrganizerApplication.java:12)
+[2020-03-26 18:26:53 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[2020-03-26 18:26:53 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2020-03-26 18:26:53 ] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [main] [284] [INFO ] Root WebApplicationContext: initialization completed in 1947 ms
+[2020-03-26 18:26:53 ] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2020-03-26 18:26:54 ] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2020-03-26 18:26:54 ] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2020-03-26 18:26:54 ] [org.hibernate.Version] [main] [44] [INFO ] HHH000412: Hibernate ORM core version 5.4.12.Final
+[2020-03-26 18:26:54 ] [org.hibernate.annotations.common.reflection.java.JavaReflectionManager] [main] [49] [INFO ] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[2020-03-26 18:26:54 ] [org.hibernate.dialect.Dialect] [main] [172] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[2020-03-26 18:26:55 ] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] [52] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2020-03-26 18:26:55 ] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [416] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2020-03-26 18:26:55 ] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [main] [220] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2020-03-26 18:26:56 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/resources/**'], []
+[2020-03-26 18:26:56 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/statics/**'], []
+[2020-03-26 18:26:56 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/css/**'], []
+[2020-03-26 18:26:56 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/js/**'], []
+[2020-03-26 18:26:56 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/images/*'], []
+[2020-03-26 18:26:56 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/incl/**'], []
+[2020-03-26 18:26:56 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6a543e09, org.springframework.security.web.context.SecurityContextPersistenceFilter@6cd66f6a, org.springframework.security.web.header.HeaderWriterFilter@5c41b8d8, org.springframework.security.web.authentication.logout.LogoutFilter@4e5364a3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5d297d4d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@578b2dec, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54387873, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d0f548a, org.springframework.security.web.session.SessionManagementFilter@5f166f2e, org.springframework.security.web.access.ExceptionTranslationFilter@702b656a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2619cb76]
+[2020-03-26 18:26:56 ] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport] [main] [181] [INFO ] Initializing ExecutorService 'applicationTaskExecutor'
+[2020-03-26 18:26:56 ] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [main] [58] [INFO ] Adding welcome page template: index
+[2020-03-26 18:26:57 ] [org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration] [main] [86] [INFO ] 
+
+Using generated security password: e2d02391-5413-4a22-b14f-6211a13ffc0d
+
+[2020-03-26 18:26:57 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting ProtocolHandler ["http-nio-8080"]
+[2020-03-26 18:26:57 ] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [main] [204] [INFO ] Tomcat started on port(s): 8080 (http) with context path ''
+[2020-03-26 18:26:57 ] [org.springframework.boot.StartupInfoLogger] [main] [61] [INFO ] Started ProjectOrganizerApplication in 6.144 seconds (JVM running for 7.182)
+[2020-03-26 18:27:02 ] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-1] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-03-26 18:27:02 ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [525] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2020-03-26 18:27:02 ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [547] [INFO ] Completed initialization in 28 ms
+[2020-03-26 18:42:17 ] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] [RMI TCP Connection(26)-127.0.0.1] [159] [INFO ] Application shutdown requested.
+[2020-03-26 18:42:17 ] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport] [RMI TCP Connection(26)-127.0.0.1] [218] [INFO ] Shutting down ExecutorService 'applicationTaskExecutor'
+[2020-03-26 18:42:17 ] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [RMI TCP Connection(26)-127.0.0.1] [598] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2020-03-26 18:42:17 ] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(26)-127.0.0.1] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2020-03-26 18:42:17 ] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(26)-127.0.0.1] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2020-03-26 18:42:22 ] [org.springframework.boot.StartupInfoLogger] [main] [55] [INFO ] Starting ProjectOrganizerApplication on LAPTOP-AF25GICJ with PID 17340 (C:\Programowanie\STS\Project-Organizer\Project-Organizer\target\classes started by media in C:\Programowanie\STS\Project-Organizer\Project-Organizer)
+[2020-03-26 18:42:22 ] [org.springframework.boot.SpringApplication] [main] [651] [INFO ] No active profile set, falling back to default profiles: default
+[2020-03-26 18:42:23 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [249] [INFO ] Multiple Spring Data modules found, entering strict repository configuration mode!
+[2020-03-26 18:42:23 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [127] [INFO ] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+[2020-03-26 18:42:23 ] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [main] [348] [INFO ] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface github.com.TomaszC283.ProjectOrganizer.admin.AdminRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[2020-03-26 18:42:23 ] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [main] [348] [INFO ] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface github.com.TomaszC283.ProjectOrganizer.user.RoleRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[2020-03-26 18:42:23 ] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [main] [348] [INFO ] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface github.com.TomaszC283.ProjectOrganizer.user.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[2020-03-26 18:42:23 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [187] [INFO ] Finished Spring Data repository scanning in 50ms. Found 0 JDBC repository interfaces.
+[2020-03-26 18:42:23 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [249] [INFO ] Multiple Spring Data modules found, entering strict repository configuration mode!
+[2020-03-26 18:42:23 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [127] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2020-03-26 18:42:23 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [187] [INFO ] Finished Spring Data repository scanning in 48ms. Found 3 JPA repository interfaces.
+[2020-03-26 18:42:24 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 18:42:24 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 18:42:24 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@24e08d59' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 18:42:24 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 18:42:24 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 18:42:24 ] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [main] [92] [INFO ] Tomcat initialized with port(s): 8080 (http)
+[2020-03-26 18:42:24 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Initializing ProtocolHandler ["http-nio-8080"]
+[2020-03-26 18:42:24 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting service [Tomcat]
+[2020-03-26 18:42:24 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/9.0.31]
+[2020-03-26 18:42:24 ] [org.apache.juli.logging.DirectJDKLog] [main] [175] [WARN ] Failed to scan [file:/C:/Users/media/.m2/repository/org/glassfish/hk2/hk2/2.6.1/jakarta.annotation-api.jar] from classloader hierarchy
+java.io.FileNotFoundException: C:\Users\media\.m2\repository\org\glassfish\hk2\hk2\2.6.1\jakarta.annotation-api.jar (Nie można odnaleźć określonego pliku)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:177)
+	at org.apache.tomcat.util.scan.JarFileUrlJar.<init>(JarFileUrlJar.java:65)
+	at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:49)
+	at org.apache.tomcat.util.scan.StandardJarScanner.process(StandardJarScanner.java:383)
+	at org.apache.tomcat.util.scan.StandardJarScanner.processURLs(StandardJarScanner.java:318)
+	at org.apache.tomcat.util.scan.StandardJarScanner.doScanClassPath(StandardJarScanner.java:270)
+	at org.apache.tomcat.util.scan.StandardJarScanner.scan(StandardJarScanner.java:233)
+	at org.apache.jasper.servlet.TldScanner.scanJars(TldScanner.java:262)
+	at org.apache.jasper.servlet.TldScanner.scan(TldScanner.java:104)
+	at org.apache.jasper.servlet.JasperInitializer.onStartup(JasperInitializer.java:83)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:467)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:107)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:88)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:438)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at github.com.TomaszC283.ProjectOrganizer.ProjectOrganizerApplication.main(ProjectOrganizerApplication.java:12)
+[2020-03-26 18:42:24 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[2020-03-26 18:42:24 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2020-03-26 18:42:24 ] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [main] [284] [INFO ] Root WebApplicationContext: initialization completed in 1969 ms
+[2020-03-26 18:42:24 ] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2020-03-26 18:42:25 ] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2020-03-26 18:42:25 ] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2020-03-26 18:42:25 ] [org.hibernate.Version] [main] [44] [INFO ] HHH000412: Hibernate ORM core version 5.4.12.Final
+[2020-03-26 18:42:25 ] [org.hibernate.annotations.common.reflection.java.JavaReflectionManager] [main] [49] [INFO ] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[2020-03-26 18:42:25 ] [org.hibernate.dialect.Dialect] [main] [172] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[2020-03-26 18:42:26 ] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] [52] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2020-03-26 18:42:26 ] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [416] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2020-03-26 18:42:26 ] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [main] [220] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2020-03-26 18:42:27 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/resources/**'], []
+[2020-03-26 18:42:27 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/statics/**'], []
+[2020-03-26 18:42:27 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/css/**'], []
+[2020-03-26 18:42:27 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/js/**'], []
+[2020-03-26 18:42:27 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/images/*'], []
+[2020-03-26 18:42:27 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: Ant [pattern='/incl/**'], []
+[2020-03-26 18:42:27 ] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [43] [INFO ] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a1cb94, org.springframework.security.web.context.SecurityContextPersistenceFilter@43fe2008, org.springframework.security.web.header.HeaderWriterFilter@457692cb, org.springframework.security.web.authentication.logout.LogoutFilter@43b172e3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3fe98084, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6a543e09, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@8b89b3a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@46d148bd, org.springframework.security.web.session.SessionManagementFilter@5d297d4d, org.springframework.security.web.access.ExceptionTranslationFilter@8ef1d58, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e0fdc83]
+[2020-03-26 18:42:28 ] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport] [main] [181] [INFO ] Initializing ExecutorService 'applicationTaskExecutor'
+[2020-03-26 18:42:28 ] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [main] [58] [INFO ] Adding welcome page template: index
+[2020-03-26 18:42:28 ] [org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration] [main] [86] [INFO ] 
+
+Using generated security password: 7c462387-4f94-4036-bb76-6da363b94742
+
+[2020-03-26 18:42:28 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting ProtocolHandler ["http-nio-8080"]
+[2020-03-26 18:42:28 ] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [main] [204] [INFO ] Tomcat started on port(s): 8080 (http) with context path ''
+[2020-03-26 18:42:28 ] [org.springframework.boot.StartupInfoLogger] [main] [61] [INFO ] Started ProjectOrganizerApplication in 6.316 seconds (JVM running for 7.458)
+[2020-03-26 18:42:35 ] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-1] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-03-26 18:42:35 ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [525] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2020-03-26 18:42:35 ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [547] [INFO ] Completed initialization in 24 ms
+[2020-03-26 19:06:49 ] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] [RMI TCP Connection(36)-127.0.0.1] [159] [INFO ] Application shutdown requested.
+[2020-03-26 19:06:49 ] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport] [RMI TCP Connection(36)-127.0.0.1] [218] [INFO ] Shutting down ExecutorService 'applicationTaskExecutor'
+[2020-03-26 19:06:49 ] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [RMI TCP Connection(36)-127.0.0.1] [598] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2020-03-26 19:06:49 ] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(36)-127.0.0.1] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2020-03-26 19:06:49 ] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(36)-127.0.0.1] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2020-03-26 23:01:53 ] [org.springframework.boot.StartupInfoLogger] [main] [55] [INFO ] Starting ProjectOrganizerApplication on LAPTOP-AF25GICJ with PID 11304 (C:\Programowanie\STS\Project-Organizer\Project-Organizer\target\classes started by media in C:\Programowanie\STS\Project-Organizer\Project-Organizer)
+[2020-03-26 23:01:53 ] [org.springframework.boot.SpringApplication] [main] [651] [INFO ] No active profile set, falling back to default profiles: default
+[2020-03-26 23:01:53 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [249] [INFO ] Multiple Spring Data modules found, entering strict repository configuration mode!
+[2020-03-26 23:01:53 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [127] [INFO ] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+[2020-03-26 23:01:53 ] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [main] [348] [INFO ] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface github.com.TomaszC283.ProjectOrganizer.admin.AdminRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[2020-03-26 23:01:53 ] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [main] [348] [INFO ] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface github.com.TomaszC283.ProjectOrganizer.orders.OrderRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[2020-03-26 23:01:53 ] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [main] [348] [INFO ] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface github.com.TomaszC283.ProjectOrganizer.orders.ProductRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[2020-03-26 23:01:53 ] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [main] [348] [INFO ] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface github.com.TomaszC283.ProjectOrganizer.orders.StatusRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[2020-03-26 23:01:53 ] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [main] [348] [INFO ] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface github.com.TomaszC283.ProjectOrganizer.user.RoleRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[2020-03-26 23:01:53 ] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [main] [348] [INFO ] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface github.com.TomaszC283.ProjectOrganizer.user.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[2020-03-26 23:01:53 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [187] [INFO ] Finished Spring Data repository scanning in 43ms. Found 0 JDBC repository interfaces.
+[2020-03-26 23:01:53 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [249] [INFO ] Multiple Spring Data modules found, entering strict repository configuration mode!
+[2020-03-26 23:01:53 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [127] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2020-03-26 23:01:53 ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [187] [INFO ] Finished Spring Data repository scanning in 42ms. Found 6 JPA repository interfaces.
+[2020-03-26 23:01:54 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 23:01:54 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 23:01:54 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@24e08d59' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 23:01:54 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 23:01:54 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2020-03-26 23:01:54 ] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [main] [92] [INFO ] Tomcat initialized with port(s): 8080 (http)
+[2020-03-26 23:01:54 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Initializing ProtocolHandler ["http-nio-8080"]
+[2020-03-26 23:01:54 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting service [Tomcat]
+[2020-03-26 23:01:54 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/9.0.31]
+[2020-03-26 23:01:54 ] [org.apache.juli.logging.DirectJDKLog] [main] [175] [WARN ] Failed to scan [file:/C:/Users/media/.m2/repository/org/glassfish/hk2/hk2/2.6.1/jakarta.annotation-api.jar] from classloader hierarchy
+java.io.FileNotFoundException: C:\Users\media\.m2\repository\org\glassfish\hk2\hk2\2.6.1\jakarta.annotation-api.jar (Nie można odnaleźć określonego pliku)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:177)
+	at org.apache.tomcat.util.scan.JarFileUrlJar.<init>(JarFileUrlJar.java:65)
+	at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:49)
+	at org.apache.tomcat.util.scan.StandardJarScanner.process(StandardJarScanner.java:383)
+	at org.apache.tomcat.util.scan.StandardJarScanner.processURLs(StandardJarScanner.java:318)
+	at org.apache.tomcat.util.scan.StandardJarScanner.doScanClassPath(StandardJarScanner.java:270)
+	at org.apache.tomcat.util.scan.StandardJarScanner.scan(StandardJarScanner.java:233)
+	at org.apache.jasper.servlet.TldScanner.scanJars(TldScanner.java:262)
+	at org.apache.jasper.servlet.TldScanner.scan(TldScanner.java:104)
+	at org.apache.jasper.servlet.JasperInitializer.onStartup(JasperInitializer.java:83)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:467)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:107)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:88)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:438)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at github.com.TomaszC283.ProjectOrganizer.ProjectOrganizerApplication.main(ProjectOrganizerApplication.java:12)
+[2020-03-26 23:01:54 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[2020-03-26 23:01:54 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2020-03-26 23:01:54 ] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [main] [284] [INFO ] Root WebApplicationContext: initialization completed in 1700 ms
+[2020-03-26 23:01:55 ] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2020-03-26 23:01:55 ] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2020-03-26 23:01:55 ] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2020-03-26 23:01:55 ] [org.hibernate.Version] [main] [44] [INFO ] HHH000412: Hibernate ORM core version 5.4.12.Final
+[2020-03-26 23:01:55 ] [org.hibernate.annotations.common.reflection.java.JavaReflectionManager] [main] [49] [INFO ] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[2020-03-26 23:01:55 ] [org.hibernate.dialect.Dialect] [main] [172] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[2020-03-26 23:01:56 ] [org.springframework.context.support.AbstractApplicationContext] [main] [558] [WARN ] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: A Foreign key refering github.com.TomaszC283.ProjectOrganizer.orders.Order from github.com.TomaszC283.ProjectOrganizer.orders.Status has the wrong number of column. should be 4
+[2020-03-26 23:01:56 ] [com.zaxxer.hikari.HikariDataSource] [main] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2020-03-26 23:01:56 ] [com.zaxxer.hikari.HikariDataSource] [main] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2020-03-26 23:01:56 ] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Stopping service [Tomcat]
+[2020-03-26 23:01:56 ] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] [main] [136] [INFO ] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2020-03-26 23:01:56 ] [org.springframework.boot.SpringApplication] [main] [826] [ERROR] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: A Foreign key refering github.com.TomaszC283.ProjectOrganizer.orders.Order from github.com.TomaszC283.ProjectOrganizer.orders.Status has the wrong number of column. should be 4
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at github.com.TomaszC283.ProjectOrganizer.ProjectOrganizerApplication.main(ProjectOrganizerApplication.java:12)
+Caused by: org.hibernate.AnnotationException: A Foreign key refering github.com.TomaszC283.ProjectOrganizer.orders.Order from github.com.TomaszC283.ProjectOrganizer.orders.Status has the wrong number of column. should be 4
+	at org.hibernate.cfg.annotations.TableBinder.bindFk(TableBinder.java:646)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindCollectionSecondPass(CollectionBinder.java:1709)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1429)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:870)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1693)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1661)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:286)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1202)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1233)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	... 16 common frames omitted

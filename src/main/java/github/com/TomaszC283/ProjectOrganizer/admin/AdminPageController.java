@@ -34,14 +34,14 @@ public class AdminPageController {
 
 	@GET
 	@RequestMapping(value = "/admin")
-	@Secured(value = { "ROLE_ADMIN" })
+	@Secured(value = { "ROLE_ADMIN","ROLE_PRODUCTION_MANAGER","ROLE_FOREMAN" })
 	public String openAdminMainPage() {
 		return "admin/admin";
 	}
 
 	@GET
 	@RequestMapping(value = "/admin/users/{page}")
-	@Secured(value = { "ROLE_ADMIN" })
+	@Secured(value = { "ROLE_ADMIN","ROLE_PRODUCTION_MANAGER","ROLE_FOREMAN" })
 	public String openAdminAllUsersPage(@PathVariable("page") int page, Model model) {
 		
 		Page<User> pages = getAllUsersPageable(page - 1, false, null);
@@ -57,7 +57,7 @@ public class AdminPageController {
 
 	@GET
 	@RequestMapping(value = "/admin/users/edit/{id}")
-	@Secured(value = { "ROLE_ADMIN" })
+	@Secured(value = { "ROLE_ADMIN","ROLE_PRODUCTION_MANAGER","ROLE_FOREMAN" })
 	public String getUserToEdit(@PathVariable("id") int id, Model model) {
 		User user = new User();
 		user = adminService.findUserById(id);
@@ -74,7 +74,7 @@ public class AdminPageController {
 
 	@POST
 	@RequestMapping(value = "/admin/updateuser/{id}")
-	@Secured(value = "ROLE_ADMIN")
+	@Secured(value = { "ROLE_ADMIN","ROLE_PRODUCTION_MANAGER","ROLE_FOREMAN" })
 	public String updateUser(@PathVariable("id") int id, User user) {
 		int nrRoli = user.getNrRoli();
 		adminService.updateUser(id, nrRoli);
@@ -83,7 +83,7 @@ public class AdminPageController {
 
 	@GET
 	@RequestMapping(value = "/admin/users/search/{searchWord}/{page}")
-	@Secured(value = "ROLE_ADMIN")
+	@Secured(value = { "ROLE_ADMIN","ROLE_PRODUCTION_MANAGER","ROLE_FOREMAN" })
 	public String openSearchUsersPage(@PathVariable("searchWord") String searchWord, 
 			@PathVariable("page") int page, Model model) {
 		Page<User> pages = getAllUsersPageable(page - 1, true, searchWord);
@@ -101,7 +101,7 @@ public class AdminPageController {
 	
 	@DELETE
 	@RequestMapping(value = "/admin/users/delete/{id}")
-	@Secured(value = "ROLE_ADMIN")
+	@Secured(value = { "ROLE_ADMIN","ROLE_PRODUCTION_MANAGER","ROLE_FOREMAN" })
 	public String deleteUser(@PathVariable("id") int id) {
 		adminService.deleteUserById(id);
 		return "redirect:/admin/users/1";
