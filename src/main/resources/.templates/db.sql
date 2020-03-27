@@ -43,19 +43,19 @@ DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products` (
   `product_id` int(11) NOT NULL AUTO_INCREMENT,
   `description` varchar(255) NOT NULL,
+  `count` INT(64) NOT NULL,
   PRIMARY KEY (`product_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
 DROP TABLE IF EXISTS `orders`;
 CREATE TABLE `orders` (
   `order_id` int(11) NOT NULL AUTO_INCREMENT,
-  `product_id` INT(11) NOT NULL,
   `description` varchar(255) NOT NULL,
   `responsible` INT(11) NOT NULL,
   `status` INT(11) NOT NULL,
   `dateoforder` varchar(255) NOT NULL,
   `deadline` varchar(255) NOT NULL,
-  `material` VARCHAR(255) NOT NULL,
+  `product_id` INT(11) NOT NULL,
   `amount` INT(255) NOT NULL,
   `price` INT(255) NOT NULL,
   PRIMARY KEY (`order_id`, `responsible`, `status`, `product_id`),
@@ -124,3 +124,9 @@ INSERT INTO `user_role` VALUES(11,11);
 INSERT INTO `user_role` VALUES(12,12);
 INSERT INTO `user_role` VALUES(13,13);
 INSERT INTO `user_role` VALUES(14,14);
+
+INSERT INTO `products` VALUES(1,'Inox',6432);
+INSERT INTO `products` VALUES(2,'Zincor',13152);
+INSERT INTO `products` VALUES(3,'Aluminium',5332);
+INSERT INTO `products` VALUES(4,'Steel',26943);
+INSERT INTO `products` VALUES(5,'Aluminium Profile',543);

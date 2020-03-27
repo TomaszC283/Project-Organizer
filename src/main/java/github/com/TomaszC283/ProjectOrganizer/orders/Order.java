@@ -1,16 +1,12 @@
 package github.com.TomaszC283.ProjectOrganizer.orders;
 
-import java.util.Set;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -25,23 +21,19 @@ public class Order {
 	@Column(name = "order_id")
 	private int id;
 
-	@Id
-	@Column(name = "order_id")
-	private int product_id;
-
 	@Column(name = "description")
 	@NotNull
 	private String description;
 
-	@Id
-	@Column(name = "responsible")
+	@ManyToOne
+	@JoinColumn(name = "user", referencedColumnName = "user_id")
 	@NotNull
-	private int responsible;
+	private User responsible;
 
-	@Id
-	@Column(name = "status")
+	@ManyToOne
+	@JoinColumn(name = "orderstatus", referencedColumnName = "status_id")
 	@NotNull
-	private int status;
+	private Status status;
 
 	@Column(name = "dateoforder")
 	@NotNull
@@ -51,9 +43,10 @@ public class Order {
 	@NotNull
 	private String deadline;
 
-	@Column(name = "material")
+	@ManyToOne
+	@JoinColumn(name = "products", referencedColumnName = "product_id")
 	@NotNull
-	private String material;
+	private Product product_id;
 
 	@Column(name = "amount")
 	@NotNull
@@ -62,33 +55,13 @@ public class Order {
 	@Column(name = "price")
 	@NotNull
 	private int price;
-
-	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "orderstatus", joinColumns = @JoinColumn(name = "status_id"), inverseJoinColumns = @JoinColumn(name = "description"))
-	private Set<Status> statusDesc;
-
-	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "user", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "email"))
-	private Set<User> responsibleUser;
-
-	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "products", joinColumns = @JoinColumn(name = "product_id"), inverseJoinColumns = @JoinColumn(name = "description"))
-	private Set<Product> products;
-
+	
 	public int getId() {
 		return id;
 	}
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	public int getProduct_id() {
-		return product_id;
-	}
-
-	public void setProduct_id(int product_id) {
-		this.product_id = product_id;
 	}
 
 	public String getDescription() {
@@ -99,19 +72,19 @@ public class Order {
 		this.description = description;
 	}
 
-	public int getResponsible() {
+	public User getResponsible() {
 		return responsible;
 	}
 
-	public void setResponsible(int responsible) {
+	public void setResponsible(User responsible) {
 		this.responsible = responsible;
 	}
 
-	public int getStatus() {
+	public Status getStatus() {
 		return status;
 	}
 
-	public void setStatus(int status) {
+	public void setStatus(Status status) {
 		this.status = status;
 	}
 
@@ -131,12 +104,12 @@ public class Order {
 		this.deadline = deadline;
 	}
 
-	public String getMaterial() {
-		return material;
+	public Product getProduct_id() {
+		return product_id;
 	}
 
-	public void setMaterial(String material) {
-		this.material = material;
+	public void setProduct_id(Product product_id) {
+		this.product_id = product_id;
 	}
 
 	public int getAmount() {
@@ -153,29 +126,5 @@ public class Order {
 
 	public void setPrice(int price) {
 		this.price = price;
-	}
-
-	public Set<Status> getStatusDesc() {
-		return statusDesc;
-	}
-
-	public void setStatusDesc(Set<Status> statusDesc) {
-		this.statusDesc = statusDesc;
-	}
-
-	public Set<User> getResponsibleUser() {
-		return responsibleUser;
-	}
-
-	public void setResponsibleUser(Set<User> responsibleUser) {
-		this.responsibleUser = responsibleUser;
-	}
-
-	public Set<Product> getProducts() {
-		return products;
-	}
-
-	public void setProducts(Set<Product> products) {
-		this.products = products;
 	}
 }
