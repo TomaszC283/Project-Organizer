@@ -14,6 +14,7 @@
 <title><s:message code="logowanie.pageName" /></title>
 </head>
 <div class="container">
+<%@include file="/WEB-INF/incl/menu.html"%>
 	<h1>Project Organizer Software</h1>
 	<div class="signin">
 		<form id="loginForm" action="/login" method="POST" class="form-signin">

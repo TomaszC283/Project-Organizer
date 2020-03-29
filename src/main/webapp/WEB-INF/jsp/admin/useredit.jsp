@@ -54,11 +54,6 @@
 				<td width="130" align="right" ><s:message code="profil.rola"/></td>
 				<td width="270" align="left"><sf:select path="nrRoli" items="${roleMap}"/></td>
 			</tr>
-			
-			<tr>
-				<td width="130" align="right" ><s:message code="profil.czyAktywny"/></td>
-				<td width="270" align="left"><sf:select path="active" items="${activityMap}"/></td>
-			</tr>
 
 			<tr>
 				<td colspan="2" align="center" bgcolor="#fff">

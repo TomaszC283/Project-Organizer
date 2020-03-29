@@ -15,6 +15,7 @@
 	<div class="container">
 		<div>
 			<%@include file="/WEB-INF/incl/menu.html"%>
+			Working Panel
 		</div>
 	</div>
 </body>

@@ -8,7 +8,6 @@
 	<sec:authorize access="hasRole('ANONYMOUS')">
 		<a href="/login">Login</a> &nbsp &nbsp &nbsp &nbsp;
         <a href="/register">Register</a> &nbsp &nbsp &nbsp &nbsp;
-        <a href="/workingpanel">Working Panel</a>&nbsp &nbsp &nbsp &nbsp;
     </sec:authorize>
 
 	<sec:authorize access="hasRole('ROLE_ADMIN')">
@@ -22,11 +21,13 @@
 	<sec:authorize access="hasRole('ROLE_PRODUCTION_MANAGER')">
 		<a href="/storage">Storage</a>&nbsp &nbsp &nbsp &nbsp;
 		<a href="/orderhistory">Order history</a>&nbsp &nbsp &nbsp &nbsp;
+		<a href="/admin">Admin Page</a> &nbsp &nbsp &nbsp &nbsp;	
 		<a href="/workingpanel">Working Panel</a>&nbsp &nbsp &nbsp &nbsp;
 	</sec:authorize>
 
 	<sec:authorize access="hasRole('ROLE_FOREMAN')">
 		<a href="/storage">Storage</a>&nbsp &nbsp &nbsp &nbsp;
+		<a href="/admin">Admin Page</a> &nbsp &nbsp &nbsp &nbsp;	
 		<a href="/workingpanel">Working Panel</a>&nbsp &nbsp &nbsp &nbsp;
 	</sec:authorize>
 

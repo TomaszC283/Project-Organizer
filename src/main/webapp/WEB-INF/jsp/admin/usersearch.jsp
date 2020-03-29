@@ -62,8 +62,6 @@
 							code="register.lastName" /></b></td>
 				<td width="220" align="center"><b><s:message
 							code="register.email" /></b></td>
-				<td width="100" align="center"><b><s:message
-							code="profil.czyAktywny" /></b></td>
 				<td width="200" align="center"><b><s:message
 							code="profil.rola" /></b></td>
 			</tr>
@@ -80,20 +78,48 @@
 					<td align="center"><a href="../edit/${u.id }"><c:out
 								value="${u.email }" /></a></td>
 					<td align="center"><c:choose>
-							<c:when test="${u.active == 1 }">
-								<font color="green"><s:message code="word.tak" /></font>
-							</c:when>
-							<c:otherwise>
-								<font color="red"><s:message code="word.nie" /></font>
-							</c:otherwise>
-						</c:choose></td>
-					<td align="center"><c:choose>
 							<c:when test="${u.nrRoli == 1 }">
-								<font color="green"><s:message code="word.admin" /></font>
+								<font color="green">Admin</font>
 							</c:when>
-							<c:otherwise>
-								<s:message code="word.user" />
-							</c:otherwise>
+								<c:when test="${u.nrRoli == 2 }">
+									<font color="blue">Production Manager</font>
+								</c:when>
+								<c:when test="${u.nrRoli == 3 }">
+									<font color="blue">Foreman</font>
+								</c:when>
+								<c:when test="${u.nrRoli == 4 }">
+									<font color="orange">Constructor</font>
+								</c:when>
+								<c:when test="${u.nrRoli == 5 }">
+									<font color="orange">Technologist</font>
+								</c:when>
+								<c:when test="${u.nrRoli == 6 }">
+									<font color="orange">Storekeeper</font>
+								</c:when>
+								<c:when test="${u.nrRoli == 7 }">
+									<font color="orange">Locskmith - Punching</font>
+								</c:when>
+								<c:when test="${u.nrRoli == 8 }">
+									<font color="orange">Locskmith - Bending</font>
+								</c:when>
+								<c:when test="${u.nrRoli == 9 }">
+									<font color="orange">Locksmith - Welding</font>
+								</c:when>
+								<c:when test="${u.nrRoli == 10 }">
+									<font color="orange">Locksmith - Printing</font>
+								</c:when>
+								<c:when test="${u.nrRoli == 11 }">
+									<font color="orange">Locksmith - Fitting</font>
+								</c:when>
+								<c:when test="${u.nrRoli == 12 }">
+									<font color="orange">Quality Controller</font>
+								</c:when>
+								<c:when test="${u.nrRoli == 13 }">
+									<font color="orange">Logistician</font>
+								</c:when>
+								<c:when test="${u.nrRoli == 14 }">
+									<font color="violet">Customer</font>
+								</c:when>
 						</c:choose></td>
 				</tr>
 			</c:forEach>

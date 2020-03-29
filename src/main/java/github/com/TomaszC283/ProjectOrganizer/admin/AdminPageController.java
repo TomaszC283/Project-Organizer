@@ -63,11 +63,9 @@ public class AdminPageController {
 		user = adminService.findUserById(id);
 		Map<Integer, String> roleMap = new HashMap<Integer, String>();
 		roleMap = prepareRoleMap();
-		Map<Integer, String> activityMap = new HashMap<Integer, String>();
 		int rola = user.getRoles().iterator().next().getId();
 		user.setNrRoli(rola);
 		model.addAttribute("roleMap", roleMap);
-		model.addAttribute("activityMap", activityMap);
 		model.addAttribute("user", user);
 		return "admin/useredit";
 	}

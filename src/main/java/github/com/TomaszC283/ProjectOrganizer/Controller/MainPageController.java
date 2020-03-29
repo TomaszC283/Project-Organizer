@@ -15,8 +15,8 @@ public class MainPageController {
 	}
 	
 	@GET
-	@RequestMapping(value = {"/denied"})
-	public String showMainPageByAccessDenied() {
+	@RequestMapping(value = "/denied")
+	public String showMainPageWhenAccessDenied() {
 		return "index";
 	}
 }
