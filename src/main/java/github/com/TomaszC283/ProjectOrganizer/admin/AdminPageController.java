@@ -25,7 +25,7 @@ import github.com.TomaszC283.ProjectOrganizer.user.User;
 public class AdminPageController {
 	
 	private static int ELEMENTS = 15;
-
+	
 	@Autowired
 	private AdminService adminService;
 
@@ -104,6 +104,8 @@ public class AdminPageController {
 		adminService.deleteUserById(id);
 		return "redirect:/admin/users/1";
 	}
+	
+
 	
 	// Metody uzytkowe
 	// Pobranie listy userów

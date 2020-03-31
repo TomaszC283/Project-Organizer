@@ -32,7 +32,6 @@
 				<input type="submit" value="LOGIN" />
 				 <input type="button" value="BACK TO MAIN PAGE"
 				onclick="window.location.href='${pageContext.request.contextPath}/'" />
-
 		</form>
 	</div>
 </div>

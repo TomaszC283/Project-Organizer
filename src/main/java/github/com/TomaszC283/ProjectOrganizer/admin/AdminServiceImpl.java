@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -25,10 +28,12 @@ public class AdminServiceImpl implements AdminService {
 
 	@Autowired
 	private RoleRepository roleRepository;
+	
+	private JSPValues jspValues;
 
 	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
-
+	
 	@Override
 	public Page<User> findAll(Pageable pageable) {
 		Page<User> userList = adminRepository.findAll(pageable);
@@ -52,20 +57,19 @@ public class AdminServiceImpl implements AdminService {
 		return userList;
 	}
 
-	
-	public void saveAll(List<User> userList) {
-		for (int i = 0; i < userList.size(); i++) {
-            Role role = roleRepository.findByRole("ROLE_CLIENT");
-            userList.get(i).setRoles(new HashSet<Role>(Arrays.asList(role)));
-			userList.get(i).setPassword(bCryptPasswordEncoder.encode(userList.get(i).getPassword()));
-		}
-		adminRepository.saveAll(userList);
-	}
-
 	@Override
 	public void deleteUserById(int id) {
 		adminRepository.deleteUserFromUserRole(id);
 		adminRepository.deleteUserFromUser(id);
+	}
+
+	@Override
+	public void saveEmployee(User user) {
+		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+		Role role = roleRepository.findByRole(jspValues.getRole_employee());
+		user.setRoles(new HashSet<Role>(Arrays.asList(role)));
+		adminRepository.save(user);
+		
 	}
 
 }
