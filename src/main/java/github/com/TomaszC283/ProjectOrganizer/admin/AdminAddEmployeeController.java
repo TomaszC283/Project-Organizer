@@ -1,6 +1,8 @@
 package github.com.TomaszC283.ProjectOrganizer.admin;
 
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -56,7 +58,7 @@ public class AdminAddEmployeeController extends HttpServlet {
 		if (result.hasErrors()) {
 			returnPage = "admin/addemployee";
 		} else {
-			adminService.saveEmployee(user);
+			adminService.saveEmployee(user, request.getParameter("role_employee"));
 			model.addAttribute("message", messageSource.getMessage("user.register.success.email", null, locale));
 			model.addAttribute("user", new User());
 			returnPage = "admin/addemployee";

@@ -28,7 +28,21 @@
 				
 			<sf:input path="password" size="28"/> 
 				
-			<input type="text" name="role_employee" id="role_employee" />
+			<select name="role_employee">
+					<option value="ROLE_ADMIN">Admin</option>
+					<option value="ROLE_PRODUCTION_MANAGER">Production Manager</option>
+					<option value="ROLE_FOREMAN">Foreman</option>
+					<option value="ROLE_CONSTRUCTOR">Constructor</option>
+					<option value="ROLE_TECHNOLOGIST">Technologist</option>
+					<option value="ROLE_STOREKEEPER">Storekeeper</option>
+					<option value="ROLE_LOCKSMITH_PUNCHING">Punching Operator</option>
+					<option value="ROLE_LOCKSMITH_BENDING">Bending Operator</option>
+					<option value="ROLE_LOCKSMITH_WELDER">Welder Operator</option>
+					<option value="ROLE_LOCKSMITH_PRINTER">Printer</option>
+					<option value="ROLE_LOCKSMITH_FITTER">Fitter</option>
+					<option value="ROLE_QUALITY_CONTROL">Quality Controller</option>
+					<option value="ROLE_LOGISTICIAN">Logistician</option>
+			</select>
 	
 			<input	type="submit" value="REGISTER EMPLOYEE" /> 
 			<input type="button" value="BACK TO MAIN PAGE"

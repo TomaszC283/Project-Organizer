@@ -1,11 +1,13 @@
 package github.com.TomaszC283.ProjectOrganizer.admin;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.List;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -20,7 +22,7 @@ import github.com.TomaszC283.ProjectOrganizer.user.User;
 
 @Service("adminService")
 @Transactional
-public class AdminServiceImpl implements AdminService {
+public class AdminServiceImpl extends HttpServlet implements AdminService {
 
 	
 	@Autowired
@@ -28,11 +30,26 @@ public class AdminServiceImpl implements AdminService {
 
 	@Autowired
 	private RoleRepository roleRepository;
-	
-	private JSPValues jspValues;
+
 
 	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
+	
+	String role_employee;
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		setRole_employee(request.getParameter("role_employee"));
+	}
+
+
+	public void setRole_employee(String role_employee) {
+		this.role_employee = role_employee;
+	}
+	
+	public String getRole_employee() {
+		return role_employee;
+	}
 	
 	@Override
 	public Page<User> findAll(Pageable pageable) {
@@ -64,12 +81,11 @@ public class AdminServiceImpl implements AdminService {
 	}
 
 	@Override
-	public void saveEmployee(User user) {
+	public void saveEmployee(User user, String role_request) {
 		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-		Role role = roleRepository.findByRole(jspValues.getRole_employee());
+		Role role = roleRepository.findByRole(role_request);
 		user.setRoles(new HashSet<Role>(Arrays.asList(role)));
 		adminRepository.save(user);
-		
 	}
 
 }
