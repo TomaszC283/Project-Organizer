@@ -16,6 +16,22 @@
 		<div>
 			<%@include file="/WEB-INF/incl/menu.html"%>
 		</div>
+		<h1>STORAGE</h1>
+		<div>
+		
+		</div>
+		<div>
+		
+		</div>
+		<div>
+		
+		</div>
+		<div>
+		
+		</div>
+		<div>
+		
+		</div>
 	</div>
 </body>
 </html>

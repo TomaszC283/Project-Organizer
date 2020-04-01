@@ -13,4 +13,10 @@ public class OrderPageController {
 	public String showWorkingPanel() {
 		return "workingpanel";
 	}
+	
+	@GET
+	@RequestMapping(value="/orderhistory")
+	public String showOrderHistory() {
+		return "orderhistory";
+	}
 }
