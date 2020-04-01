@@ -1,8 +1,6 @@
 package github.com.TomaszC283.ProjectOrganizer.admin;
 
-import java.util.HashMap;
 import java.util.Locale;
-import java.util.Map;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

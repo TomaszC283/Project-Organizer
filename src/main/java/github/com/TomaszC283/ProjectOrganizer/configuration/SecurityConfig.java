@@ -37,22 +37,31 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	}
 
 	protected void configure(HttpSecurity httpSec) throws Exception {
-		httpSec.authorizeRequests().antMatchers("/").permitAll().antMatchers("/login").permitAll().antMatchers("/admin/**")
-				.hasAnyRole("ADMIN", "PRODUCTION_MANAGER", "FOREMAN").antMatchers("/workingpanel")
+		httpSec.authorizeRequests()
+			.antMatchers("/").permitAll()
+			.antMatchers("/index").permitAll()
+			.antMatchers("/login").permitAll()
+			.antMatchers("/admin/**")
+				.hasAnyRole("ADMIN", "PRODUCTION_MANAGER", "FOREMAN")
+			.antMatchers("/workingpanel")
 				.hasAnyRole("ADMIN", "PRODUCTION_MANAGER", "FOREMAN", "CONSTRUCTOR",
-						"TECHNOLOGIST", "STOREKEEPER", "LOCKSMITH_PUNCHING", "LOCKSMITH_BENDING",
-						"LOCKSMITH_WELDER", "LOCKSMITH_PRINTER", "LOCKSMITH_FITTER",
-						"QUALITY_CONTROL", "LOGISTICIAN")
-				.antMatchers("/index").permitAll().antMatchers("/register").permitAll().antMatchers("/adduser")
-				.permitAll().antMatchers("/storage")
+							"TECHNOLOGIST", "STOREKEEPER", "LOCKSMITH_PUNCHING", "LOCKSMITH_BENDING",
+							"LOCKSMITH_WELDER", "LOCKSMITH_PRINTER", "LOCKSMITH_FITTER",
+							"QUALITY_CONTROL", "LOGISTICIAN")
+			.antMatchers("/register").permitAll()
+			.antMatchers("/adduser").permitAll()
+			.antMatchers("/storage")
 				.hasAnyRole("ADMIN", "PRODUCTION_MANAGER", "LOGISTICIAN", "CONSTRUCTOR",
-						"STORE_KEEPER", "TECHNOLOGIST")
-				.antMatchers("/services").permitAll().antMatchers("/contact").permitAll().antMatchers("/orderhistory")
-				.hasAnyRole("ADMIN", "PRODUCTION_MANAGER", "FOREMAN", "CONSTRUCTOR").anyRequest()
-				.authenticated().and().csrf().disable().formLogin().loginPage("/login").failureUrl("/login?error=true")
-				.defaultSuccessUrl("/").usernameParameter("email").passwordParameter("password").and().logout()
-				.logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/").and()
-				.exceptionHandling().accessDeniedPage("/denied");
+							"STORE_KEEPER", "TECHNOLOGIST")
+			.antMatchers("/store").permitAll()
+			.antMatchers("/contact").permitAll()
+			.antMatchers("/orderhistory")
+				.hasAnyRole("ADMIN", "PRODUCTION_MANAGER", "FOREMAN", "CONSTRUCTOR")
+			.antMatchers("/profil").authenticated()	
+			.anyRequest().authenticated().and().csrf().disable().formLogin().loginPage("/login").failureUrl("/login?error=true")
+			.defaultSuccessUrl("/").usernameParameter("email").passwordParameter("password").and().logout()
+			.logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/").and()
+			.exceptionHandling().accessDeniedPage("/denied");
 	}
 
 	public void configure(WebSecurity webSec) throws Exception {

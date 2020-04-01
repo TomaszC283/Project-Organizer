@@ -20,6 +20,7 @@ import github.com.TomaszC283.ProjectOrganizer.user.Role;
 import github.com.TomaszC283.ProjectOrganizer.user.RoleRepository;
 import github.com.TomaszC283.ProjectOrganizer.user.User;
 
+@SuppressWarnings("serial")
 @Service("adminService")
 @Transactional
 public class AdminServiceImpl extends HttpServlet implements AdminService {
@@ -41,8 +42,7 @@ public class AdminServiceImpl extends HttpServlet implements AdminService {
 			throws ServletException, IOException {
 		setRole_employee(request.getParameter("role_employee"));
 	}
-
-
+	
 	public void setRole_employee(String role_employee) {
 		this.role_employee = role_employee;
 	}

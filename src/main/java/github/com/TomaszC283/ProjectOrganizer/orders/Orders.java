@@ -14,7 +14,7 @@ import github.com.TomaszC283.ProjectOrganizer.user.User;
 
 @Entity
 @Table(name = "Orders")
-public class Order {
+public class Orders {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

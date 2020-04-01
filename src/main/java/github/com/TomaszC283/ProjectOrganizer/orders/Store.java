@@ -1,26 +1,25 @@
-package github.com.TomaszC283.ProjectOrganizer.user;
+package github.com.TomaszC283.ProjectOrganizer.orders;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "role")
-public class Role {
+@Table(name = "store")
+public class Store {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "role_id")
+	@Column(name = "offer_id")
 	private int id;
 	
-	@Column(name = "role")
+	@Column(name = "description")
 	@NotNull
-	private String role;
-	
+	private String description;
 	
 	public int getId() {
 		return id;
@@ -28,10 +27,11 @@ public class Role {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getRole() {
-		return role;
+	public String getDescription() {
+		return description;
 	}
-	public void setRole(String role) {
-		this.role = role;
+	public void setDescription(String description) {
+		this.description = description;
 	}
+
 }

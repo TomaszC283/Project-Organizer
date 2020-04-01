@@ -47,6 +47,22 @@ CREATE TABLE `products` (
   PRIMARY KEY (`product_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
+DROP TABLE IF EXISTS `store`;
+CREATE TABLE `store` (
+  `offer_id` int(11) NOT NULL AUTO_INCREMENT,
+  `description` varchar(255) NOT NULL,
+  PRIMARY KEY(`offer_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
+
+DROP TABLE IF EXISTS `order_from_client`;
+CREATE TABLE `order_from_client` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `message` VARCHAR(255),
+  `amount` INT(11) NOT NULL,
+  `offer_status` INT(11) NOT NULL,
+  PRIMARY KEY(`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
+
 DROP TABLE IF EXISTS `orders`;
 CREATE TABLE `orders` (
   `order_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -63,6 +79,12 @@ CREATE TABLE `orders` (
   FOREIGN KEY (`status`) REFERENCES `orderstatus` (`status_id`),
   FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
+
+INSERT INTO `store` VALUES (1, 'tin cabinet');
+INSERT INTO `store` VALUES (2, 'steel structures');
+INSERT INTO `store` VALUES (3,'garage');
+INSERT INTO `store` VALUES (4,'metal housings');
+INSERT INTO `store` VALUES (5,'Special order');
 
 INSERT INTO `orderstatus` VALUES (1, 'ORDER');
 INSERT INTO `orderstatus` VALUES (2, 'ADOPTED');

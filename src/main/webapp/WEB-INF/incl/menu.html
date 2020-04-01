@@ -1,8 +1,8 @@
 <div class="menu">
-	<a href="/index">Main Page</a>&nbsp &nbsp &nbsp &nbsp; <a
-		href="/contact">Contact</a>&nbsp &nbsp &nbsp &nbsp;
+	<a href="/index">Main Page</a>&nbsp &nbsp &nbsp &nbsp; 
+	<a href="/contact">Contact</a>&nbsp &nbsp &nbsp &nbsp;
 	<sec:authorize access="hasRole('ROLE_CLIENT')">
-		<a href="store">Services</a>&nbsp &nbsp &nbsp &nbsp;
+		<a href="/store">Services</a>&nbsp &nbsp &nbsp &nbsp;
 	</sec:authorize>
 
 	<sec:authorize access="hasRole('ANONYMOUS')">
@@ -11,7 +11,7 @@
     </sec:authorize>
 
 	<sec:authorize access="hasRole('ROLE_ADMIN')">
-		<a href="store">Services</a>&nbsp &nbsp &nbsp &nbsp;
+		<a href="/store">Services</a>&nbsp &nbsp &nbsp &nbsp;
 		<a href="/storage">Storage</a> &nbsp &nbsp &nbsp &nbsp;
 		<a href="/orderhistory">Order history</a>&nbsp &nbsp &nbsp &nbsp;
 		<a href="/admin">Admin Page</a> &nbsp &nbsp &nbsp &nbsp;		
@@ -32,7 +32,7 @@
 	</sec:authorize>
 
 	<sec:authorize access="hasRole('ROLE_CONSTRUCTOR')">
-		<a href="store">Services</a>&nbsp &nbsp &nbsp &nbsp;
+		<a href="/store">Services</a>&nbsp &nbsp &nbsp &nbsp;
 		<a href="/storage">Storage</a>&nbsp &nbsp &nbsp &nbsp;
 		<a href="/orderhistory">Order history</a>&nbsp &nbsp &nbsp &nbsp;
 		<a href="/workingpanel">Working Panel</a>&nbsp &nbsp &nbsp &nbsp;
@@ -74,7 +74,7 @@
 	</sec:authorize>
 
 	<sec:authorize access="hasRole('ROLE_LOGISTICIAN')">
-		<a href="store">Services</a>&nbsp &nbsp &nbsp &nbsp;
+		<a href="/store">Services</a>&nbsp &nbsp &nbsp &nbsp;
 		<a href="/storage">Storage</a>&nbsp &nbsp &nbsp &nbsp;
 		<a href="/orderhistory">Order history</a>&nbsp &nbsp &nbsp &nbsp;
 		<a href="/workingpanel">Working Panel</a>&nbsp &nbsp &nbsp &nbsp;

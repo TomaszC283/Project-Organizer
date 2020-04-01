@@ -3,8 +3,8 @@ package github.com.TomaszC283.ProjectOrganizer.orders;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository("orderRepository")
-public interface OrderRepository extends JpaRepository<Order, Integer>{
+@Repository("ordersRepository")
+public interface OrdersRepository extends JpaRepository<Orders, Integer>{
 	
-	public OrderRepository findById(int id);
+	public OrdersRepository findById(int id);
 }

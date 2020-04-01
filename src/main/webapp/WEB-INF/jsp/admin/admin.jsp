@@ -18,7 +18,7 @@
 	<h1>What do you want to do ?</h1>
 	<div class="signin">
 		<form id="loginForm" class="form-signin">
-				<input type="button" value="DISPLAY ALL USERS" onclick="window.location.href='${pageContext.request.contextPath}/users/1'" />
+				<input type="button" value="DISPLAY ALL USERS" onclick="window.location.href='${pageContext.request.contextPath}/admin/users/1'" />
 				<input type="button" value="ADD NEW EMPLOYEE" onclick="window.location.href='${pageContext.request.contextPath}/admin/addemployee'" />
 				<input type="button" value="BACK TO MAIN PAGE" onclick="window.location.href='${pageContext.request.contextPath}/'" />
 		</form>
