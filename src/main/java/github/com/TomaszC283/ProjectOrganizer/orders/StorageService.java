@@ -1,12 +1,11 @@
 package github.com.TomaszC283.ProjectOrganizer.orders;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
+import java.util.List;
 
 public interface StorageService {
 	
 	public Product findById(int id);
-	Page<Product> findAll(Pageable pageable);
+	List<Product> findAll();
 	void updateProduct(int id, int amount);
 	
 }

@@ -18,9 +18,9 @@ public class Product {
 	@NotNull
 	private String description;
 
-	@Column(name = "count")
+	@Column(name = "amount")
 	@NotNull
-	private int count;
+	private int amount;
 
 	public int getId() {
 		return id;
@@ -38,11 +38,11 @@ public class Product {
 		this.description = description;
 	}
 
-	public int getCount() {
-		return count;
+	public int getAmount() {
+		return amount;
 	}
 
-	public void setCount(int count) {
-		this.count = count;
+	public void setAmount(int amount) {
+		this.amount = amount;
 	}
 }
