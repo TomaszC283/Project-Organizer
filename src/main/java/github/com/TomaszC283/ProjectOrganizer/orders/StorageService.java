@@ -5,7 +5,8 @@ import java.util.List;
 public interface StorageService {
 	
 	public Product findById(int id);
-	List<Product> findAll();
-	void updateProduct(int id, int amount);
+	public List<Product> findAll();
+	public void updateProduct(int id, int amount);
+	public void saveProduct(Product product);
 	
 }

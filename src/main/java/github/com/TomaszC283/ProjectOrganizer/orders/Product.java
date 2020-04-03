@@ -2,7 +2,10 @@ package github.com.TomaszC283.ProjectOrganizer.orders;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
@@ -11,6 +14,7 @@ import javax.validation.constraints.NotNull;
 public class Product {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "product_id")
 	private int id;
 
@@ -22,6 +26,9 @@ public class Product {
 	@NotNull
 	private int amount;
 
+	@Transient
+	private int amount_sub;
+	
 	public int getId() {
 		return id;
 	}
@@ -44,5 +51,13 @@ public class Product {
 
 	public void setAmount(int amount) {
 		this.amount = amount;
+	}
+
+	public int getAmount_sub() {
+		return amount_sub;
+	}
+
+	public void setAmount_sub(int amount_sub) {
+		this.amount_sub = amount_sub;
 	}
 }

@@ -30,4 +30,8 @@ public class StorageServiceImpl implements StorageService {
 		productRepository.updateProductAmount(amount, id);
 	}
 
+	@Override
+	public void saveProduct(Product product) {
+		productRepository.save(product);
+	}
 }

@@ -21,22 +21,30 @@
 </script>
 </head>
 <body>
-		<div>
-			<%@include file="/WEB-INF/incl/menu.html"%>
-		</div>
-		<c:set var="licznik" value="${recordStartCounter }" />
+	<div>
+		<%@include file="/WEB-INF/incl/menu.html"%>
+	</div>
+	<c:set var="licznik" value="${recordStartCounter }" />
 	<div align="center">
 		<table width="1000" border="0" cellpadding="6" cellspacing="2">
 			<c:forEach var="u" items="${productList }">
 				<c:set var="licznik" value="${licznik+1}" />
 				<tr onmouseover="changeTrBg(this)" onmouseout="defaultTrBg(this)">
 					<td align="right"><c:out value="${licznik }" /></td>
-					<td align="left"><c:out	value="${u.description }" /></td>
-					<td align="left"><c:out	value="${u.amount }" /></td>
+					<td align="left"><c:out value="${u.description }" /></td>
+					<td align="left"><c:out value="${u.amount }" /></td>
+					<td align="center"><input type="text" name="amount_sub_${licznik}" id="amount_sub_${licznik}"></td>
+					<td align="center"><input type="button" value="Substract the value" onclick="window.location.href='${pageContext.request.contextPath}/storage/subamount/${licznik}'"/></td>
 				</tr>
 			</c:forEach>
 		</table>
-
+		<sf:form action="${pageContext.request.contextPath}/addproduct"
+			method="post" modelAttribute="Product">
+			<sf:input type="text" name="desc" path="description" id="desc" /> 
+			<sf:input type="text" name="amount" path="amount" id="amount" /> 
+			<input type="submit"	value="Add Product" />
+		</sf:form>
+		<input type="button" value="BACK TO MAIN MENU" onclick="window.location.href='${pageContext.request.contextPath}/'" />
 	</div>
 </body>
 </html>
