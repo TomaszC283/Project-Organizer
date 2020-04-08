@@ -27,7 +27,7 @@ public class Product {
 	private int amount;
 
 	@Transient
-	private int amount_sub;
+	private String amount_sub;
 	
 	public int getId() {
 		return id;
@@ -53,11 +53,11 @@ public class Product {
 		this.amount = amount;
 	}
 
-	public int getAmount_sub() {
+	public String getAmount_sub() {
 		return amount_sub;
 	}
 
-	public void setAmount_sub(int amount_sub) {
+	public void setAmount_sub(String amount_sub) {
 		this.amount_sub = amount_sub;
 	}
 }

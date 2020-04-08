@@ -12,12 +12,6 @@
 <link rel="stylesheet" type="text/css" href="/resources/css/style.css" />
 <title><s:message code="menu.users" /></title>
 <script type="text/javascript">
-	function changeTrBg(row) {
-		row.style.backgroundColor = "#e6e6e6";
-	}
-	function defaultTrBg(row) {
-		row.style.backgroundColor = "white";
-	}
 	function startSerach(pParam) {
 		var searchWord = document.getElementById('searchString').value;
 		var page = parseInt(document.getElementById('cp').value)
@@ -64,7 +58,7 @@
 			</tr>
 			<c:forEach var="u" items="${userList }">
 				<c:set var="licznik" value="${licznik+1}" />
-				<tr onmouseover="changeTrBg(this)" onmouseout="defaultTrBg(this)">
+				<tr>
 					<td align="right"><c:out value="${licznik }" /></td>
 					<td align="right"><a href="edit/${u.id }"><c:out
 								value="${u.id }" /></a></td>

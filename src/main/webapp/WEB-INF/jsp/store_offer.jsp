@@ -18,24 +18,26 @@
 			<%@include file="/WEB-INF/incl/menu.html"%>
 		</div>
 		<div align="center">
-			<div>
-				<table width="1000" border="0" cellpadding="6" cellspacing="2">
-					<c:forEach var="u" items="${storeList }">
-						<tr>
-							<td align="right"><c:out value="${u.id }" /></td>
-							<td align="left"><c:out value="${u.description }" /></td>
-							<sf:form
-								action="${pageContext.request.contextPath}/store/${u.id}"
-								method="post" modelAttribute="Store">
-								<td align="center"></td>
-								<td align="center"><input type="submit"
-									value="Choose that Service" /></td>
-							</sf:form>
-						</tr>
-					</c:forEach>
-				</table>
-			</div>
+			<h2>
+				You want to make order for :
+				<c:out value="${store.description }" />
+			</h2>
 		</div>
+		<div>
+			<h3>Input message to describe your order :</h3>
+		</div>
+		<sf:form modelAttribute="ClientOrder" method="post" action="${pageContext.request.contextPath}/store/sendoffer">
+			<div>
+				<sf:input class="store-message" type="text" path="message" value="I Want to order ${store.description }."></sf:input>
+			</div>
+			<div>
+				<h3>in what quantity</h3>
+				<sf:input type="text" path="amount"></sf:input>
+			</div>
+			<div>
+				<input type="submit" value="Send an offer"/>
+			</div>
+		</sf:form>
 	</div>
 </body>
 </html>

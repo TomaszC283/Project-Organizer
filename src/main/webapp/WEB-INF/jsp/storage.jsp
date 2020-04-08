@@ -11,40 +11,50 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="/resources/css/style.css" />
 <title><s:message code="menu.mainPage" /></title>
-<script type="text/javascript">
-	function changeTrBg(row) {
-		row.style.backgroundColor = "#e6e6e6";
-	}
-	function defaultTrBg(row) {
-		row.style.backgroundColor = "white";
-	}
-</script>
+
 </head>
 <body>
 	<div>
 		<%@include file="/WEB-INF/incl/menu.html"%>
 	</div>
-	<c:set var="licznik" value="${recordStartCounter }" />
 	<div align="center">
-		<table width="1000" border="0" cellpadding="6" cellspacing="2">
+		<table width="1000" border="0" cellpadding="6" cellspacing="2" >
 			<c:forEach var="u" items="${productList }">
-				<c:set var="licznik" value="${licznik+1}" />
-				<tr onmouseover="changeTrBg(this)" onmouseout="defaultTrBg(this)">
-					<td align="right"><c:out value="${licznik }" /></td>
+				<tr>
+					<td align="right"><c:out value="${u.id }" /></td>
 					<td align="left"><c:out value="${u.description }" /></td>
 					<td align="left"><c:out value="${u.amount }" /></td>
-					<td align="center"><input type="text" name="amount_sub_${licznik}" id="amount_sub_${licznik}"></td>
-					<td align="center"><input type="button" value="Substract the value" onclick="window.location.href='${pageContext.request.contextPath}/storage/subamount/${licznik}'"/></td>
+					<sf:form
+						action="${pageContext.request.contextPath}/storage/subamount/${u.id}"
+						method="post" modelAttribute="Product">
+						<td align="center"><sf:input type="text" name="sub_${u.id}"
+								path="amount_sub" id="sub_${u.id}"></sf:input></td>
+						<td align="center"><input type="submit"
+							value="Substract the value" /></td>
+					</sf:form>
+
+					<td>
+						<form action="${pageContext.request.contextPath}/storage/delete/${u.id }" method="post">
+							<input type="submit" value="Delete Product"/>
+						</form>
+					</td>
+
 				</tr>
 			</c:forEach>
+
 		</table>
+		<h2 class="error"><%=request.getAttribute("subError")%></h2>
 		<sf:form action="${pageContext.request.contextPath}/addproduct"
 			method="post" modelAttribute="Product">
-			<sf:input type="text" name="desc" path="description" id="desc" /> 
-			<sf:input type="text" name="amount" path="amount" id="amount" /> 
-			<input type="submit"	value="Add Product" />
+			<sf:input type="text" name="desc" path="description" id="desc" />
+			<sf:input type="text" name="amount" path="amount" id="amount" />
+			<input type="submit" value="Add Product" />
+			<div>
+				<h2 class="error"><%=request.getAttribute("addError")%></h2>
+			</div>
 		</sf:form>
-		<input type="button" value="BACK TO MAIN MENU" onclick="window.location.href='${pageContext.request.contextPath}/'" />
+		<input type="button" value="BACK TO MAIN MENU"
+			onclick="window.location.href='${pageContext.request.contextPath}/'" />
 	</div>
 </body>
 </html>

@@ -26,12 +26,12 @@ public class Orders {
 	private String description;
 
 	@ManyToOne
-	@JoinColumn(name = "user", referencedColumnName = "user_id")
+	@JoinColumn(name = "responsible", referencedColumnName = "user_id")
 	@NotNull
 	private User responsible;
 
 	@ManyToOne
-	@JoinColumn(name = "orderstatus", referencedColumnName = "status_id")
+	@JoinColumn(name = "status", referencedColumnName = "status_id")
 	@NotNull
 	private Status status;
 
@@ -44,7 +44,7 @@ public class Orders {
 	private String deadline;
 
 	@ManyToOne
-	@JoinColumn(name = "products", referencedColumnName = "product_id")
+	@JoinColumn(name = "product_id", referencedColumnName = "product_id")
 	@NotNull
 	private Product product_id;
 
