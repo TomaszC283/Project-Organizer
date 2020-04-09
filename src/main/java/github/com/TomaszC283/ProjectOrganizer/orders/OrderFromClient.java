@@ -29,6 +29,10 @@ public class OrderFromClient {
 	@NotNull
 	private int offerStatus;
 
+	@Column(name = "client_id")
+	@NotNull
+	private int client_id;
+
 	public int getId() {
 		return id;
 	}
@@ -59,5 +63,13 @@ public class OrderFromClient {
 
 	public void setOfferStatus(int offerStatus) {
 		this.offerStatus = offerStatus;
+	}
+
+	public int getClient_id() {
+		return client_id;
+	}
+
+	public void setClient_id(int client_id) {
+		this.client_id = client_id;
 	}
 }

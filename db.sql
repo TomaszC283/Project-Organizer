@@ -60,12 +60,14 @@ CREATE TABLE `order_from_client` (
   `message` VARCHAR(255),
   `amount` INT(11) NOT NULL,
   `offer_status` INT(11) NOT NULL,
+  `client_id` INT(11) NOT NULL,
   PRIMARY KEY(`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
 DROP TABLE IF EXISTS `orders`;
 CREATE TABLE `orders` (
   `order_id` int(11) NOT NULL AUTO_INCREMENT,
+  `clientOrder_id` INT(11) NOT NULL,
   `description` varchar(255) NOT NULL,
   `responsible` INT(11) NOT NULL,
   `status` INT(11) NOT NULL,
@@ -74,11 +76,12 @@ CREATE TABLE `orders` (
   `product_id` INT(11) NOT NULL,
   `amount` INT(255) NOT NULL,
   `price` INT(255) NOT NULL,
-  PRIMARY KEY (`order_id`, `responsible`, `status`, `product_id`),
-  FOREIGN KEY (`responsible`) REFERENCES `user` (`user_id`),
-  FOREIGN KEY (`status`) REFERENCES `orderstatus` (`status_id`),
-  FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`)
+  PRIMARY KEY (`order_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
+
+INSERT INTO `orders` VALUES (1, 1, 'description' , 1 , 1 , CONVERT(NOW(), DATE), CONVERT(date_add(NOW(), INTERVAL 14 DAY), DATE), 1, 15, 20000);
+
+INSERT INTO `order_from_client` VALUES (1, 'message' , 15, 1, 14);
 
 INSERT INTO `store` VALUES (1, 'tin cabinet');
 INSERT INTO `store` VALUES (2, 'steel structures');

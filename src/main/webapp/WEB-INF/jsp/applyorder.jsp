@@ -20,7 +20,7 @@
 		<div align="center">
 			<table>
 				<tr>
-					<td><c:out value="${order.id }" /></td>
+					<td><c:out value="${order.id }"/></td>
 					<td><c:out value="${order.message }" /></td>
 					<td><c:out value="${order.amount }" /></td>
 				</tr>
@@ -38,8 +38,6 @@
 					<tr>
 						<td>Description</td>
 						<td>Responsible</td>
-						<td>Date of Order</td>
-						<td>Planned end time</td>
 						<td>Product</td>
 						<td>Amount</td>
 						<td>Price</td>
@@ -51,8 +49,6 @@
 								<option value="${u.id}"><c:out value="${u.name}"/> <c:out value="${u.lastName}"/></option>							
 							</c:forEach>
 						</sf:select></td>
-						<td>Date of Order</td>
-						<td>Planned end time</td>
 						<td>
 							<sf:select path="product_id">
 							<c:forEach var="p" items="${productList }">
@@ -64,6 +60,7 @@
 						<td><sf:input type="text" path="price"></sf:input></td>
 					</tr>
 					<tr><td><input type="submit" value="Send order to Production"/></td></tr>
+					<sf:input path="client_id" value="${order.id }"/>
 				</sf:form>
 			</table>
 		</div>

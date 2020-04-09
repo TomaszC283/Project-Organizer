@@ -1,5 +1,9 @@
 package github.com.TomaszC283.ProjectOrganizer.Controller;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import javax.ws.rs.GET;
@@ -79,7 +83,26 @@ public class OrderPageController {
 	@RequestMapping(value="/workingpanel/apply")
 	public String ApplyingClientOrder(Model model, OrderFromClient clientOrder, Orders staffOrder, Status status, User user)	{
 		
-		System.out.println("Order added");
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+		Date date = new Date();
+		
+		String dateNow = dateFormat.format(date);
+		
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(date);
+		cal.add(Calendar.DATE,  14);
+		date = cal.getTime();
+		
+		String DateDeadline = dateFormat.format(date);
+		
+		staffOrder.setDateOfOrder(dateNow);
+		staffOrder.setDeadline(DateDeadline);
+		staffOrder.setStatus(2);
+		
+		OrderFromClient ClientOrder = orderFromClientRepository.findById(staffOrder.getClient_id());
+		ClientOrder.setOfferStatus(1);
+		orderFromClientRepository.save(ClientOrder);
+		
 		ordersRepository.save(staffOrder);
 			
 		getListOfOrders(model, clientOrder, staffOrder, status);

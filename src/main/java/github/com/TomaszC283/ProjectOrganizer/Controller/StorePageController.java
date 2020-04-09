@@ -17,6 +17,9 @@ import github.com.TomaszC283.ProjectOrganizer.orders.OrderFromClient;
 import github.com.TomaszC283.ProjectOrganizer.orders.OrderFromClientRepository;
 import github.com.TomaszC283.ProjectOrganizer.orders.Store;
 import github.com.TomaszC283.ProjectOrganizer.orders.StoreRepository;
+import github.com.TomaszC283.ProjectOrganizer.user.User;
+import github.com.TomaszC283.ProjectOrganizer.user.UserService;
+import github.com.TomaszC283.ProjectOrganizer.utilities.UserUtilities;
 
 @Controller
 public class StorePageController {
@@ -26,6 +29,9 @@ public class StorePageController {
 	
 	@Autowired
 	OrderFromClientRepository orderFromClientRepository;
+	
+	@Autowired
+	private UserService userService;
 	
 	@GET
 	@RequestMapping(value = "/store")
@@ -56,6 +62,9 @@ public class StorePageController {
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
 		String date = simpleDateFormat.format(new Date());
 		
+		String username = UserUtilities.getLoggedUser();
+		User user = userService.findUserByEmail(username);
+		order.setClient_id(user.getId());
 		order.setOfferStatus(0);
 		order.setMessage(date + " Message from client : " + order.getMessage());
 		orderFromClientRepository.save(order);

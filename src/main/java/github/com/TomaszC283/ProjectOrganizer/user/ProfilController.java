@@ -1,5 +1,6 @@
 package github.com.TomaszC283.ProjectOrganizer.user;
 
+import java.util.List;
 import java.util.Locale;
 
 import javax.ws.rs.GET;
@@ -12,6 +13,10 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import github.com.TomaszC283.ProjectOrganizer.orders.OrderFromClient;
+import github.com.TomaszC283.ProjectOrganizer.orders.OrderFromClientRepository;
+import github.com.TomaszC283.ProjectOrganizer.orders.Orders;
+import github.com.TomaszC283.ProjectOrganizer.orders.OrdersRepository;
 import github.com.TomaszC283.ProjectOrganizer.utilities.UserUtilities;
 import github.com.TomaszC283.ProjectOrganizer.validators.ChangePasswordValidator;
 import github.com.TomaszC283.ProjectOrganizer.validators.EditUserProfileValidator;
@@ -25,6 +30,12 @@ public class ProfilController {
 	@Autowired
 	private MessageSource messageSource;
 	
+	@Autowired
+	private OrderFromClientRepository orderFromClientRepository;
+	
+	@Autowired
+	private OrdersRepository ordersRepository;
+	
 	@GET
 	@RequestMapping(value = "/profil")
 	public String showUserProfilePage(Model model) {	
@@ -33,6 +44,13 @@ public class ProfilController {
 		int nrRoli = user.getRoles().iterator().next().getId();
 		user.setNrRoli(nrRoli);
 		model.addAttribute("user", user);
+		
+		List<OrderFromClient> clientOrderList = orderFromClientRepository.findAll();
+		model.addAttribute("clientOrderList", clientOrderList);
+		
+		List<Orders> ordersList = ordersRepository.findAll();
+		model.addAttribute("ordersList", ordersList);
+			
 		return "profil";
 	}
 	

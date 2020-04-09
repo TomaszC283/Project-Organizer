@@ -5,12 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-
-import github.com.TomaszC283.ProjectOrganizer.user.User;
 
 @Entity
 @Table(name = "Orders")
@@ -21,19 +17,21 @@ public class Orders {
 	@Column(name = "order_id")
 	private int id;
 
+	@Column(name = "clientorder_id")
+	@NotNull
+	private int client_id;
+
 	@Column(name = "description")
 	@NotNull
 	private String description;
 
-	@ManyToOne
-	@JoinColumn(name = "responsible", referencedColumnName = "user_id")
+	@Column(name = "responsible")
 	@NotNull
-	private User responsible;
+	private String responsible;
 
-	@ManyToOne
-	@JoinColumn(name = "status", referencedColumnName = "status_id")
+	@Column(name = "status")
 	@NotNull
-	private Status status;
+	private int status;
 
 	@Column(name = "dateoforder")
 	@NotNull
@@ -43,10 +41,9 @@ public class Orders {
 	@NotNull
 	private String deadline;
 
-	@ManyToOne
-	@JoinColumn(name = "product_id", referencedColumnName = "product_id")
+	@Column(name = "product_id")
 	@NotNull
-	private Product product_id;
+	private int product_id;
 
 	@Column(name = "amount")
 	@NotNull
@@ -55,13 +52,21 @@ public class Orders {
 	@Column(name = "price")
 	@NotNull
 	private int price;
-	
+
 	public int getId() {
 		return id;
 	}
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public int getClient_id() {
+		return client_id;
+	}
+
+	public void setClient_id(int client_id) {
+		this.client_id = client_id;
 	}
 
 	public String getDescription() {
@@ -72,19 +77,19 @@ public class Orders {
 		this.description = description;
 	}
 
-	public User getResponsible() {
+	public String getResponsible() {
 		return responsible;
 	}
 
-	public void setResponsible(User responsible) {
+	public void setResponsible(String responsible) {
 		this.responsible = responsible;
 	}
 
-	public Status getStatus() {
+	public int getStatus() {
 		return status;
 	}
 
-	public void setStatus(Status status) {
+	public void setStatus(int status) {
 		this.status = status;
 	}
 
@@ -104,11 +109,11 @@ public class Orders {
 		this.deadline = deadline;
 	}
 
-	public Product getProduct_id() {
+	public int getProduct_id() {
 		return product_id;
 	}
 
-	public void setProduct_id(Product product_id) {
+	public void setProduct_id(int product_id) {
 		this.product_id = product_id;
 	}
 

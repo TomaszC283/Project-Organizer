@@ -101,6 +101,47 @@
 				</td>
 			</tr>
 		</table>
+		<c:forEach var="c" items="${clientOrderList }">
+			<c:choose>
+				<c:when test="${user.id == c.client_id }">
+					<div>
+						<h2>Your orders :</h2>
+						<table>
+							<tr>
+								<td>Order ID :</td>
+								<td>Your message :</td>
+								<td>Amount :</td>
+								<td>Price :</td>
+								<td>Status :</td>
+							</tr>
+							<tr>
+								<td><c:out value="${c.id }" /></td>
+								<td><c:out value="${c.message }" /></td>
+								<td><c:out value="${c.amount }" /></td>
+								<td><c:forEach var="o" items="${ ordersList }">
+										<c:choose>
+											<c:when test="${c.id == o.id }">
+												<c:out value="${o.price }" />
+											</c:when>
+										</c:choose>
+									</c:forEach></td>
+								<td><c:choose>
+										<c:when test="${c.offerStatus == 0 }">
+											Order confirmed and waiting to start producing
+									</c:when>
+										<c:when test="${c.offerStatus == 1 }">
+											Order is in progress on production.
+									</c:when>
+										<c:when test="${c.offerStatus == 2 }">
+											Order completed and sent.
+									</c:when>
+									</c:choose></td>
+							</tr>
+						</table>
+					</div>
+				</c:when>
+			</c:choose>
+		</c:forEach>
 
 	</div>
 </body>
