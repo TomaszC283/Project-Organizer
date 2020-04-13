@@ -79,9 +79,34 @@ CREATE TABLE `orders` (
   PRIMARY KEY (`order_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
-INSERT INTO `orders` VALUES (1, 1, 'description' , 1 , 1 , CONVERT(NOW(), DATE), CONVERT(date_add(NOW(), INTERVAL 14 DAY), DATE), 1, 15, 20000);
+INSERT INTO `orders` VALUES (1, 1, 'description' , 1 , 2 , CONVERT(NOW(), DATE), CONVERT(date_add(NOW(), INTERVAL 14 DAY), DATE), 1, 15, 15000);
+INSERT INTO `orders` VALUES (2, 2, 'description' , 1 , 3 , CONVERT(date_add(NOW(), INTERVAL -2 DAY), DATE), CONVERT(date_add(NOW(), INTERVAL 12 DAY), DATE), 2, 2, 20000);
+INSERT INTO `orders` VALUES (3, 3, 'description' , 1 , 4 , CONVERT(date_add(NOW(), INTERVAL -3 DAY), DATE), CONVERT(date_add(NOW(), INTERVAL 11 DAY), DATE), 3, 3, 6000);
+INSERT INTO `orders` VALUES (4, 4, 'description' , 1 , 5 , CONVERT(date_add(NOW(), INTERVAL -4 DAY), DATE), CONVERT(date_add(NOW(), INTERVAL 10 DAY), DATE), 3, 5, 70000);
+INSERT INTO `orders` VALUES (5, 5, 'description' , 1 , 6 , CONVERT(date_add(NOW(), INTERVAL -5 DAY), DATE), CONVERT(date_add(NOW(), INTERVAL 9 DAY), DATE), 4, 7, 21000);
+INSERT INTO `orders` VALUES (6, 6, 'special_order_desc' , 1 , 7 , CONVERT(date_add(NOW(), INTERVAL -6 DAY), DATE), CONVERT(date_add(NOW(), INTERVAL 8 DAY), DATE), 5, 12, 23000);
+INSERT INTO `orders` VALUES (7, 7, 'description' , 1 , 8 , CONVERT(date_add(NOW(), INTERVAL -7 DAY), DATE), CONVERT(date_add(NOW(), INTERVAL 7 DAY), DATE), 2, 1, 6000);
+INSERT INTO `orders` VALUES (8, 8, 'description' , 1 , 9 , CONVERT(date_add(NOW(), INTERVAL -8 DAY), DATE), CONVERT(date_add(NOW(), INTERVAL 6 DAY), DATE), 3, 2, 12000);
+INSERT INTO `orders` VALUES (9, 9, 'description' , 1 , 10 , CONVERT(date_add(NOW(), INTERVAL -9 DAY), DATE), CONVERT(date_add(NOW(), INTERVAL 5 DAY), DATE), 2, 25, 200000);
+INSERT INTO `orders` VALUES (10, 10, 'description' , 1 , 11 , CONVERT(date_add(NOW(), INTERVAL -10 DAY), DATE), CONVERT(date_add(NOW(), INTERVAL 4 DAY), DATE), 3, 10, 110000);
+INSERT INTO `orders` VALUES (11, 11, 'description' , 1 , 12 , CONVERT(date_add(NOW(), INTERVAL -11 DAY), DATE), CONVERT(date_add(NOW(), INTERVAL 3 DAY), DATE), 4, 5, 50000);
+INSERT INTO `orders` VALUES (12, 12, 'special_order_desc' , 1 , 13 , CONVERT(date_add(NOW(), INTERVAL -12 DAY), DATE), CONVERT(date_add(NOW(), INTERVAL 2 DAY), DATE), 5, 6, 45000);
+INSERT INTO `orders` VALUES (13, 13, 'description' , 1 , 14 , CONVERT(date_add(NOW(), INTERVAL -13 DAY), DATE), CONVERT(date_add(NOW(), INTERVAL 1 DAY), DATE), 1, 10, 75000);
 
-INSERT INTO `order_from_client` VALUES (1, 'message' , 15, 1, 14);
+INSERT INTO `order_from_client` VALUES (1, 'message' , 15 , 1 , 14);
+INSERT INTO `order_from_client` VALUES (2, 'message' , 2 , 1 , 14);
+INSERT INTO `order_from_client` VALUES (3, 'message' , 3 , 1 , 14);
+INSERT INTO `order_from_client` VALUES (4, 'message' , 5 , 1 , 14);
+INSERT INTO `order_from_client` VALUES (5, 'message' , 7 , 1 , 14);
+INSERT INTO `order_from_client` VALUES (6, 'message' , 12 , 1 , 14);
+INSERT INTO `order_from_client` VALUES (7, 'message' , 1 , 1 , 14);
+INSERT INTO `order_from_client` VALUES (8, 'message' , 2 , 1 , 14);
+INSERT INTO `order_from_client` VALUES (9, 'message' , 25 , 1 , 14);
+INSERT INTO `order_from_client` VALUES (10, 'message', 10 , 1 , 14);
+INSERT INTO `order_from_client` VALUES (11, 'message', 5 , 1 , 14);
+INSERT INTO `order_from_client` VALUES (12, 'message', 6 , 1 , 14);
+INSERT INTO `order_from_client` VALUES (13, 'message', 10 , 3 , 14);
+INSERT INTO `order_from_client` VALUES (14, 'message', 100 , 0 , 14);
 
 INSERT INTO `store` VALUES (1, 'tin cabinet');
 INSERT INTO `store` VALUES (2, 'steel structures');

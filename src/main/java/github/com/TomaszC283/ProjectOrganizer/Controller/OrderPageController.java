@@ -49,6 +49,10 @@ public class OrderPageController {
 	public String showWorkingPanel(Model model, OrderFromClient clientOrder, Orders staffOrder, Status status) {
 		
 		getListOfOrders(model, clientOrder, staffOrder, status);
+		
+		List<User> userList = userRepository.findAll();
+		model.addAttribute("userList", userList);
+		
 		return "workingpanel";
 	}
 	
@@ -58,6 +62,21 @@ public class OrderPageController {
 		return "orderhistory";
 	}
 	
+	@POST
+	@RequestMapping(value="/workingpanel/move/{id}")
+	public String orderMoveForward(@PathVariable("id") int id, Model model, OrderFromClient clientOrder, Orders staffOrder, Status status, User user) {
+		
+		Orders moveOrder = ordersRepository.findById(id);
+		moveOrder.setStatus(moveOrder.getStatus() + 1);
+		ordersRepository.save(moveOrder);
+		
+		getListOfOrders(model, clientOrder, staffOrder, status);
+		
+		List<User> userList = userRepository.findAll();
+		model.addAttribute("userList", userList);
+		
+		return "workingpanel";
+	}
 	@POST
 	@RequestMapping(value="/workingpanel/apply/{id}")
 	public String showApplyingClientOrder(@PathVariable("id") int id, Model model, OrderFromClient clientOrder, Orders staffOrder, Status status, User user)	{
