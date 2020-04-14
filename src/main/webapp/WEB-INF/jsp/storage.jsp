@@ -18,43 +18,47 @@
 		<%@include file="/WEB-INF/incl/menu.html"%>
 	</div>
 	<div align="center">
-		<table width="1000" border="0" cellpadding="6" cellspacing="2" >
-			<c:forEach var="u" items="${productList }">
-				<tr>
-					<td align="right"><c:out value="${u.id }" /></td>
-					<td align="left"><c:out value="${u.description }" /></td>
-					<td align="left"><c:out value="${u.amount }" /></td>
-					<sf:form
-						action="${pageContext.request.contextPath}/storage/subamount/${u.id}"
-						method="post" modelAttribute="Product">
-						<td align="center"><sf:input type="text" name="sub_${u.id}"
-								path="amount_sub" id="sub_${u.id}"></sf:input></td>
-						<td align="center"><input type="submit"
-							value="Substract the value" /></td>
-					</sf:form>
+		<div class="container-div">
+			<table width="1000" border="0" cellpadding="6" cellspacing="2">
+				<c:forEach var="u" items="${productList }">
+					<tr class="staff-order-value">
+						<td align="right"><c:out value="${u.id }" /></td>
+						<td align="left"><c:out value="${u.description }" /></td>
+						<td align="left"><c:out value="${u.amount }" /></td>
+						<sf:form
+							action="${pageContext.request.contextPath}/storage/subamount/${u.id}"
+							method="post" modelAttribute="Product">
+							<td align="center"><sf:input type="text" name="sub_${u.id}"
+									path="amount_sub" id="sub_${u.id}"></sf:input></td>
+							<td align="center"><input type="submit"
+								value="Substract the value" /></td>
+						</sf:form>
 
-					<td>
-						<form action="${pageContext.request.contextPath}/storage/delete/${u.id }" method="post">
-							<input type="submit" value="Delete Product"/>
-						</form>
-					</td>
+						<td>
+							<form
+								action="${pageContext.request.contextPath}/storage/delete/${u.id }"
+								method="post">
+								<input type="submit" value="Delete Product" />
+							</form>
+						</td>
 
-				</tr>
-			</c:forEach>
+					</tr>
+				</c:forEach>
 
-		</table>
-		<h2 class="error"><%=request.getAttribute("subError")%></h2>
-		<sf:form action="${pageContext.request.contextPath}/addproduct"
-			method="post" modelAttribute="Product">
-			<sf:input type="text" name="desc" path="description" id="desc" />
-			<sf:input type="text" name="amount" path="amount" id="amount" />
-			<input type="submit" value="Add Product" />
-			<div>
-				<h2 class="error"><%=request.getAttribute("addError")%></h2>
-			</div>
-		</sf:form>
-		<input type="button" value="BACK TO MAIN MENU"
-			onclick="window.location.href='${pageContext.request.contextPath}/'" />
+			</table>
+			<h2 class="error"><%=request.getAttribute("subError")%></h2>
+			<sf:form action="${pageContext.request.contextPath}/addproduct"
+				method="post" modelAttribute="Product">
+				<sf:input type="text" name="desc" path="description" id="desc" />
+				<sf:input type="text" name="amount" path="amount" id="amount" />
+				<input type="submit" value="Add Product" />
+				<div>
+					<h2 class="error"><%=request.getAttribute("addError")%></h2>
+				</div>
+			</sf:form>
+			<input type="button" value="BACK TO MAIN MENU"
+				onclick="window.location.href='${pageContext.request.contextPath}/'" />
+		</div>
 	</div>
 </body>
 </html>
