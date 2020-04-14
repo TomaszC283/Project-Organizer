@@ -58,7 +58,13 @@ public class OrderPageController {
 	
 	@GET
 	@RequestMapping(value="/orderhistory")
-	public String showOrderHistory() {
+	public String showOrderHistory(Model model, OrderFromClient clientOrder, Orders staffOrder, Status status) {
+		
+		getListOfOrders(model, clientOrder, staffOrder, status);
+		
+		List<User> userList = userRepository.findAll();
+		model.addAttribute("userList", userList);
+		
 		return "orderhistory";
 	}
 	

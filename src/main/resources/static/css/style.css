@@ -21,8 +21,13 @@ body {
 	border-bottom: none;
 }
 
+.container-buttons {
+	width: 410px;
+	margin: auto;
+}
+
 .container-div input[type="submit"] {
-    width: 100px;
+    width: 200px;
     padding: 10px 0;
     outline: none;
     border: 1px solid #7B7474;
@@ -35,6 +40,27 @@ body {
 }
 
 .container-div input[type="submit"]:hover {
+	background-color: rgba(16, 89, 134, 0.52);
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.container-div input[type="button"] {
+    width: 200px;
+    padding: 10px 0;
+    outline: none;
+    border: 1px solid #7B7474;
+    font-family: Oswald-Regular;
+    font-size: 15px;
+    color: #FFFFFF;
+    background-color: rgba(23, 24, 25, 0.24);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container-div input[type="button"]:hover {
 	background-color: rgba(16, 89, 134, 0.52);
 	-webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -330,4 +356,13 @@ body {
 	height: 100%;
 	background-image: linear-gradient(green, yellow);
 	border-radius: 15px;
+}
+
+#edit-profile {
+	color:red;
+	float: right;
+	font-family: calibri;
+	font-weight: bold;
+	font-size: 19px;
+	padding: 0px 10px;
 }

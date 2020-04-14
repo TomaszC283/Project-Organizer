@@ -23,7 +23,7 @@
 					<font>Incorect Email or Password !</font>
 				</c:if>
 			</div>
-			<input type="text" class="user" name="email" id="email" value="admin@projectorganizer.pl"
+			<input type="text" class="user" name="email" id="email" value="client@projectorganizer.pl"
 				onfocus="this.value = '';"
 				onblur="if (this.value == '') {this.value = 'email';}" />
 				<input type="password" name="password" id="password" class="pass" value="Start00#"
